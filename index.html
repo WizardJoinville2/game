@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SynthLearn - Aprenda Inglês com Música</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
 
@@ -51,21 +50,11 @@
         //  Remove: "Como se diz: ", aspas, "?" e espaços extras
         // ============================================================
         function cleanPhrase(text) {
-            // Remove "Como se diz: " ou "Como se diz:" do início
             let cleaned = text.replace(/^Como se diz:\s*"?|^Como se diz\s*"?/, '');
-            
-            // Remove aspas duplas no início e no final
             cleaned = cleaned.replace(/^"|"$/g, '');
-            
-            // Remove aspas simples no início e no final
             cleaned = cleaned.replace(/^'|'$/g, '');
-            
-            // Remove "?" no final da frase (incluindo espaço antes)
             cleaned = cleaned.replace(/\s*\?\s*$/, '');
-            
-            // Remove aspas que possam ter ficado
             cleaned = cleaned.replace(/"/g, '');
-            
             return cleaned.trim();
         }
 
@@ -93,19 +82,17 @@
                 const data = await response.json();
                 allLessons = data.lessons;
                 totalLessons = allLessons.length;
-                
                 iniciarNovoJogo();
-                
             } catch (error) {
                 console.error('Erro ao carregar dados:', error);
                 mainContent.innerHTML = `
-                    <div style="text-align: center; padding: 40px; color: #ff6b9d;">
-                        <div style="font-size: 3rem; margin-bottom: 15px;">⚠️</div>
-                        <h3 style="color: #fff; margin-bottom: 10px;">Erro ao carregar os dados!</h3>
-                        <p style="color: #7a8bb5;">Verifique se o arquivo <strong>dados.json</strong> está na mesma pasta.</p>
-                        <p style="color: #5a6f96; font-size: 0.9rem; margin-top: 10px;">Detalhes: ${error.message}</p>
-                    </div>
-                `;
+                            <div style="text-align: center; padding: 40px; color: #ff6b9d;">
+                                <div style="font-size: 3rem; margin-bottom: 15px;">⚠️</div>
+                                <h3 style="color: #f5eeff; margin-bottom: 10px;">Erro ao carregar os dados!</h3>
+                                <p style="color: #b0a0d0;">Verifique se o arquivo <strong>dados.json</strong> está na mesma pasta.</p>
+                                <p style="color: #7a6a9a; font-size: 0.9rem; margin-top: 10px;">Detalhes: ${error.message}</p>
+                            </div>
+                        `;
             }
         }
 
@@ -118,7 +105,6 @@
             totalAnswered = 0;
             correctCount = 0;
             answered = false;
-            
             renderQuestion();
         }
 
@@ -162,12 +148,11 @@
 
             const fallback = document.createElement('p');
             fallback.textContent = 'Seu navegador não suporta vídeo.';
-            fallback.style.cssText = 'color: #7a8bb5; padding: 20px; text-align: center;';
+            fallback.style.cssText = 'color: #b0a0d0; padding: 20px; text-align: center;';
             video.appendChild(fallback);
 
             wrapper.appendChild(video);
 
-            // Cria o botão "Próximo →" DENTRO do wrapper do vídeo
             const nextBtn = document.createElement('button');
             nextBtn.className = 'next-btn';
             nextBtn.id = 'nextBtn';
@@ -196,7 +181,6 @@
             const correctAnswer = lesson.options[lesson.correctIndex];
             const correctIndexShuffled = shuffledOptions.indexOf(correctAnswer);
 
-            // Limpa a frase para exibir apenas o conteúdo
             const cleanPhraseText = cleanPhrase(lesson.portuguese);
 
             answered = false;
@@ -205,7 +189,7 @@
             let optionsHtml = shuffledOptions.map((opt, idx) => `
                         <button class="option-btn" data-index="${idx}" data-correct="${idx === correctIndexShuffled}">
                             <span class="letter">${letters[idx]}</span>
-                            ${opt}
+                            <span class="option-text">${opt}</span>
                         </button>
                     `).join('');
 
@@ -213,7 +197,7 @@
                         <div class="question-card">
                             <div class="question-label">
                                 <span class="label-dot"></span>
-                                TRADUZA PARA O INGLÊS
+                                COMO SE DIZ EM INGLÊS:
                             </div>
                             <div class="question-text">
                                 <span class="phrase-icon">“</span>
@@ -240,7 +224,6 @@
             const feedbackText = document.getElementById('feedbackText');
             const feedbackArea = document.getElementById('feedbackArea');
 
-            // Variável para guardar referência ao botão next
             let nextBtn = null;
 
             optionBtns.forEach(btn => {
@@ -284,14 +267,12 @@
 
                     feedbackArea.classList.add('has-feedback');
 
-                    // Pega o botão que foi criado dentro do video-player-wrapper
                     nextBtn = videoPlayer.querySelector('.next-btn');
                     nextBtn.classList.add('active');
 
-                    // Adiciona o evento de clique no botão
                     nextBtn.addEventListener('click', function() {
                         if (!answered) return;
-                        
+
                         const video = videoPlayer.querySelector('video');
                         if (video) {
                             video.pause();
@@ -300,7 +281,7 @@
 
                         remainingLessons.shift();
                         totalAnswered++;
-                        
+
                         renderQuestion();
                     });
                 });
@@ -326,13 +307,12 @@
                             <div class="trophy">${emoji}</div>
                             <h2>Você completou todas!</h2>
                             <p>${message}</p>
-                            <p style="font-size: 1.4rem; font-weight: 700; color: #fff;">
-                                ${correctCount} / ${totalLessons} acertos
-                            </p>
-                            <div style="margin-top: 15px; width: 100%; height: 6px; background: rgba(255,107,157,0.06); border-radius: 10px; overflow: hidden;">
-                                <div style="width: ${percentage}%; height: 100%; background: linear-gradient(90deg, #ff6b9d, #c084fc); border-radius: 10px;"></div>
+                            <div class="score-display">
+                                <span class="score-number">${correctCount}</span> / ${totalLessons} acertos
                             </div>
-                            <br>
+                            <div class="score-bar">
+                                <div class="score-bar-fill" style="width: ${percentage}%;"></div>
+                            </div>
                             <button class="restart-btn" id="restartBtn">🔄 Recomeçar (nova ordem aleatória)</button>
                         </div>
                     `;
