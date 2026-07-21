@@ -134,7 +134,7 @@
         }
 
         // ============================================================
-        //  FUNÇÃO PARA CRIAR PLAYER DE VÍDEO
+        //  FUNÇÃO PARA CRIAR PLAYER DE VÍDEO COM BOTÃO DENTRO
         // ============================================================
         function createVideoPlayer(videoUrl, thumbnail = null) {
             const wrapper = document.createElement('div');
@@ -167,6 +167,13 @@
 
             wrapper.appendChild(video);
 
+            // Cria o botão "Próximo →" DENTRO do wrapper do vídeo
+            const nextBtn = document.createElement('button');
+            nextBtn.className = 'next-btn';
+            nextBtn.id = 'nextBtn';
+            nextBtn.innerHTML = 'Próximo →';
+            wrapper.appendChild(nextBtn);
+
             const hint = document.createElement('div');
             hint.className = 'video-controls-hint';
             hint.textContent = '🎬 Use os controles para pausar, ajustar volume ou assistir em tela cheia';
@@ -189,7 +196,7 @@
             const correctAnswer = lesson.options[lesson.correctIndex];
             const correctIndexShuffled = shuffledOptions.indexOf(correctAnswer);
 
-            // Limpa a frase para exibir apenas o conteúdo (sem "Como se diz", sem "?" e sem aspas)
+            // Limpa a frase para exibir apenas o conteúdo
             const cleanPhraseText = cleanPhrase(lesson.portuguese);
 
             answered = false;
@@ -224,17 +231,17 @@
                                 💡 Clique na opção correta para assistir ao clipe da música!
                             </div>
                         </div>
-
-                        <button class="next-btn" id="nextBtn">▶ Próximo vídeo</button>
                     `;
 
             mainContent.innerHTML = html;
             updateProgress();
 
             const optionBtns = document.querySelectorAll('.option-btn');
-            const nextBtn = document.getElementById('nextBtn');
             const feedbackText = document.getElementById('feedbackText');
             const feedbackArea = document.getElementById('feedbackArea');
+
+            // Variável para guardar referência ao botão next
+            let nextBtn = null;
 
             optionBtns.forEach(btn => {
                 btn.addEventListener('click', function(e) {
@@ -276,23 +283,27 @@
                     feedbackArea.appendChild(videoPlayer);
 
                     feedbackArea.classList.add('has-feedback');
+
+                    // Pega o botão que foi criado dentro do video-player-wrapper
+                    nextBtn = videoPlayer.querySelector('.next-btn');
                     nextBtn.classList.add('active');
+
+                    // Adiciona o evento de clique no botão
+                    nextBtn.addEventListener('click', function() {
+                        if (!answered) return;
+                        
+                        const video = videoPlayer.querySelector('video');
+                        if (video) {
+                            video.pause();
+                            video.currentTime = 0;
+                        }
+
+                        remainingLessons.shift();
+                        totalAnswered++;
+                        
+                        renderQuestion();
+                    });
                 });
-            });
-
-            nextBtn.addEventListener('click', function() {
-                if (!answered) return;
-                
-                const video = document.querySelector('video');
-                if (video) {
-                    video.pause();
-                    video.currentTime = 0;
-                }
-
-                remainingLessons.shift();
-                totalAnswered++;
-                
-                renderQuestion();
             });
         }
 
