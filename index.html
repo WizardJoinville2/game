@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SynthLearn - Aprenda Inglês com Música</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <div class="container" id="app">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>🎵 <span>Synth</span>Learn</h1>
+            <div class="progress-badge" id="progressBadge">1 / 5</div>
+        </div>
+
+        <!-- BARRA DE PROGRESSO -->
+        <div class="progress-bar-wrap">
+            <div class="progress-bar-fill" id="progressFill"></div>
+        </div>
+
+        <!-- ÁREA PRINCIPAL (dinâmica) -->
+        <div id="mainContent">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Carregando vídeos...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ============================================================
+        //  CARREGAR DADOS DO ARQUIVO JSON
+        // ============================================================
+        let allLessons = [];
+        let remainingLessons = [];
+        let currentIndex = 0;
+        let answered = false;
+        let correctCount = 0;
+        let totalLessons = 0;
+        let totalAnswered = 0;
+
+        const mainContent = document.getElementById('mainContent');
+        const progressBadge = document.getElementById('progressBadge');
+        const progressFill = document.getElementById('progressFill');
+
+        // ============================================================
+        //  FUNÇÃO PARA LIMPAR A FRASE
+        //  Remove: "Como se diz: ", aspas, "?" e espaços extras
+        // ============================================================
+        function cleanPhrase(text) {
+            // Remove "Como se diz: " ou "Como se diz:" do início
+            let cleaned = text.replace(/^Como se diz:\s*"?|^Como se diz\s*"?/, '');
+            
+            // Remove aspas duplas no início e no final
+            cleaned = cleaned.replace(/^"|"$/g, '');
+            
+            // Remove aspas simples no início e no final
+            cleaned = cleaned.replace(/^'|'$/g, '');
+            
+            // Remove "?" no final da frase (incluindo espaço antes)
+            cleaned = cleaned.replace(/\s*\?\s*$/, '');
+            
+            // Remove aspas que possam ter ficado
+            cleaned = cleaned.replace(/"/g, '');
+            
+            return cleaned.trim();
+        }
+
+        // ============================================================
+        //  FUNÇÃO PARA EMBARALHAR ARRAY
+        // ============================================================
+        function shuffleArray(arr) {
+            const shuffled = [...arr];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        // ============================================================
+        //  FUNÇÃO PARA CARREGAR OS DADOS
+        // ============================================================
+        async function carregarDados() {
+            try {
+                const response = await fetch('dados.json');
+                if (!response.ok) {
+                    throw new Error('Arquivo dados.json não encontrado');
+                }
+                const data = await response.json();
+                allLessons = data.lessons;
+                totalLessons = allLessons.length;
+                
+                iniciarNovoJogo();
+                
+            } catch (error) {
+                console.error('Erro ao carregar dados:', error);
+                mainContent.innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: #ff6b9d;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">⚠️</div>
+                        <h3 style="color: #fff; margin-bottom: 10px;">Erro ao carregar os dados!</h3>
+                        <p style="color: #7a8bb5;">Verifique se o arquivo <strong>dados.json</strong> está na mesma pasta.</p>
+                        <p style="color: #5a6f96; font-size: 0.9rem; margin-top: 10px;">Detalhes: ${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        // ============================================================
+        //  INICIAR NOVO JOGO
+        // ============================================================
+        function iniciarNovoJogo() {
+            remainingLessons = shuffleArray(allLessons);
+            currentIndex = 0;
+            totalAnswered = 0;
+            correctCount = 0;
+            answered = false;
+            
+            renderQuestion();
+        }
+
+        // ============================================================
+        //  FUNÇÃO PARA EMBARALHAR AS OPÇÕES
+        // ============================================================
+        function shuffleOptions(arr) {
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        // ============================================================
+        //  FUNÇÃO PARA CRIAR PLAYER DE VÍDEO
+        // ============================================================
+        function createVideoPlayer(videoUrl, thumbnail = null) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'video-player-wrapper';
+
+            const video = document.createElement('video');
+            video.controls = true;
+            video.autoplay = true;
+            video.preload = 'metadata';
+            video.playsInline = true;
+
+            if (thumbnail) {
+                video.poster = thumbnail;
+            }
+
+            const source = document.createElement('source');
+            source.src = videoUrl;
+            source.type = 'video/mp4';
+            video.appendChild(source);
+
+            const webmSource = document.createElement('source');
+            webmSource.src = videoUrl.replace('.mp4', '.webm');
+            webmSource.type = 'video/webm';
+            video.appendChild(webmSource);
+
+            const fallback = document.createElement('p');
+            fallback.textContent = 'Seu navegador não suporta vídeo.';
+            fallback.style.cssText = 'color: #7a8bb5; padding: 20px; text-align: center;';
+            video.appendChild(fallback);
+
+            wrapper.appendChild(video);
+
+            const hint = document.createElement('div');
+            hint.className = 'video-controls-hint';
+            hint.textContent = '🎬 Use os controles para pausar, ajustar volume ou assistir em tela cheia';
+            wrapper.appendChild(hint);
+
+            return wrapper;
+        }
+
+        // ============================================================
+        //  RENDERIZAR PERGUNTA
+        // ============================================================
+        function renderQuestion() {
+            if (remainingLessons.length === 0) {
+                renderFinalScreen();
+                return;
+            }
+
+            const lesson = remainingLessons[0];
+            const shuffledOptions = shuffleOptions([...lesson.options]);
+            const correctAnswer = lesson.options[lesson.correctIndex];
+            const correctIndexShuffled = shuffledOptions.indexOf(correctAnswer);
+
+            // Limpa a frase para exibir apenas o conteúdo (sem "Como se diz", sem "?" e sem aspas)
+            const cleanPhraseText = cleanPhrase(lesson.portuguese);
+
+            answered = false;
+
+            const letters = ['A', 'B', 'C'];
+            let optionsHtml = shuffledOptions.map((opt, idx) => `
+                        <button class="option-btn" data-index="${idx}" data-correct="${idx === correctIndexShuffled}">
+                            <span class="letter">${letters[idx]}</span>
+                            ${opt}
+                        </button>
+                    `).join('');
+
+            const html = `
+                        <div class="question-card">
+                            <div class="question-label">
+                                <span class="label-dot"></span>
+                                TRADUZA PARA O INGLÊS
+                            </div>
+                            <div class="question-text">
+                                <span class="phrase-icon">“</span>
+                                ${cleanPhraseText}
+                                <span class="phrase-icon">”</span>
+                            </div>
+                        </div>
+
+                        <div class="options" id="optionsContainer">
+                            ${optionsHtml}
+                        </div>
+
+                        <div class="feedback-area" id="feedbackArea">
+                            <div class="feedback-text" id="feedbackText">
+                                💡 Clique na opção correta para assistir ao clipe da música!
+                            </div>
+                        </div>
+
+                        <button class="next-btn" id="nextBtn">▶ Próximo vídeo</button>
+                    `;
+
+            mainContent.innerHTML = html;
+            updateProgress();
+
+            const optionBtns = document.querySelectorAll('.option-btn');
+            const nextBtn = document.getElementById('nextBtn');
+            const feedbackText = document.getElementById('feedbackText');
+            const feedbackArea = document.getElementById('feedbackArea');
+
+            optionBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    if (answered) return;
+                    const isCorrect = this.dataset.correct === 'true';
+
+                    optionBtns.forEach(b => b.disabled = true);
+                    optionBtns.forEach(b => {
+                        if (b.dataset.correct === 'true') {
+                            b.classList.add('correct');
+                        }
+                    });
+
+                    if (!isCorrect) {
+                        this.classList.add('wrong');
+                    } else {
+                        correctCount++;
+                    }
+
+                    answered = true;
+
+                    const songTitle = lesson.songTitle || 'Música';
+                    const correctPhrase = lesson.options[lesson.correctIndex];
+
+                    if (isCorrect) {
+                        feedbackText.innerHTML = `
+                                    ✅ <strong>Acertou!</strong> "${correctPhrase}" — 🎬 <strong>${songTitle}</strong>
+                                `;
+                    } else {
+                        feedbackText.innerHTML = `
+                                    ❌ <strong>Ops!</strong> A resposta certa é: <strong>${correctPhrase}</strong> — 🎬 <strong>${songTitle}</strong>
+                                `;
+                    }
+
+                    const oldVideo = feedbackArea.querySelector('.video-player-wrapper');
+                    if (oldVideo) oldVideo.remove();
+
+                    const videoPlayer = createVideoPlayer(lesson.videoUrl, lesson.thumbnail);
+                    feedbackArea.appendChild(videoPlayer);
+
+                    feedbackArea.classList.add('has-feedback');
+                    nextBtn.classList.add('active');
+                });
+            });
+
+            nextBtn.addEventListener('click', function() {
+                if (!answered) return;
+                
+                const video = document.querySelector('video');
+                if (video) {
+                    video.pause();
+                    video.currentTime = 0;
+                }
+
+                remainingLessons.shift();
+                totalAnswered++;
+                
+                renderQuestion();
+            });
+        }
+
+        // ============================================================
+        //  TELA FINAL
+        // ============================================================
+        function renderFinalScreen() {
+            const percentage = Math.round((correctCount / totalLessons) * 100);
+            let message = '';
+            let emoji = '';
+
+            if (percentage === 100) { emoji = '🏆';
+                message = 'Perfeito! Você é um gênio da música!'; } else if (percentage >= 80) { emoji = '🌟';
+                message = 'Muito bem! Quase lá!'; } else if (percentage >= 50) { emoji = '💪';
+                message = 'Bom trabalho! Continue praticando!'; } else { emoji = '📚';
+                message = 'Valeu pelo esforço! Tente novamente!'; }
+
+            const html = `
+                        <div class="final-screen">
+                            <div class="trophy">${emoji}</div>
+                            <h2>Você completou todas!</h2>
+                            <p>${message}</p>
+                            <p style="font-size: 1.4rem; font-weight: 700; color: #fff;">
+                                ${correctCount} / ${totalLessons} acertos
+                            </p>
+                            <div style="margin-top: 15px; width: 100%; height: 6px; background: rgba(255,107,157,0.06); border-radius: 10px; overflow: hidden;">
+                                <div style="width: ${percentage}%; height: 100%; background: linear-gradient(90deg, #ff6b9d, #c084fc); border-radius: 10px;"></div>
+                            </div>
+                            <br>
+                            <button class="restart-btn" id="restartBtn">🔄 Recomeçar (nova ordem aleatória)</button>
+                        </div>
+                    `;
+
+            mainContent.innerHTML = html;
+            progressBadge.textContent = `🎉 Fim!`;
+            progressFill.style.width = '100%';
+
+            document.getElementById('restartBtn').addEventListener('click', () => {
+                iniciarNovoJogo();
+            });
+        }
+
+        // ============================================================
+        //  ATUALIZAR PROGRESSO
+        // ============================================================
+        function updateProgress() {
+            progressBadge.textContent = `${totalAnswered + 1} / ${totalLessons}`;
+            const percent = (totalAnswered / totalLessons) * 100;
+            progressFill.style.width = `${percent}%`;
+        }
+
+        // ============================================================
+        //  INICIAR
+        // ============================================================
+        carregarDados();
+    </script>
+
+</body>
+</html>
