@@ -67,7 +67,7 @@ body::after {
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border-radius: 48px;
-    padding: 24px 28px 26px;
+    padding: 20px 26px 22px;
     box-shadow:
         0 40px 80px rgba(0, 0, 0, 0.8),
         0 0 60px rgba(255, 107, 157, 0.05),
@@ -131,14 +131,14 @@ body::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
     border-bottom: 1px solid rgba(255, 107, 157, 0.08);
     flex-shrink: 0;
 }
 
 .header h1 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 800;
     color: #fff;
     letter-spacing: -0.5px;
@@ -158,9 +158,9 @@ body::after {
 .progress-badge {
     background: rgba(255, 107, 157, 0.08);
     border-radius: 100px;
-    padding: 5px 16px;
+    padding: 4px 14px;
     color: #b8a0d8;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 600;
     border: 1px solid rgba(255, 107, 157, 0.1);
     white-space: nowrap;
@@ -178,7 +178,7 @@ body::after {
     height: 4px;
     background: rgba(255, 107, 157, 0.06);
     border-radius: 10px;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     overflow: hidden;
     position: relative;
     border: 1px solid rgba(255, 107, 157, 0.04);
@@ -249,14 +249,14 @@ body::after {
 }
 
 /* ============================================================
-   CARD DA PERGUNTA - MAIS DESTAQUE
+   CARD DA PERGUNTA - ESPAÇAMENTO REDUZIDO
    ============================================================ */
 .question-card {
     background: rgba(255, 107, 157, 0.04);
-    border-radius: 20px;
-    padding: 16px 20px 14px;
+    border-radius: 18px;
+    padding: 12px 18px 10px;
     border: 1px solid rgba(255, 107, 157, 0.08);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -271,18 +271,18 @@ body::after {
     right: 0;
     bottom: 0;
     background: linear-gradient(135deg, rgba(255, 107, 157, 0.06), rgba(192, 132, 252, 0.06));
-    border-radius: 20px;
+    border-radius: 18px;
     pointer-events: none;
 }
 
-/* LABEL "TRADUZA PARA O INGLÊS" - MAIS VISÍVEL */
+/* LABEL "TRADUZA PARA O INGLÊS" */
 .question-label {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #a890c8;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -291,8 +291,8 @@ body::after {
 
 .question-label .label-dot {
     display: inline-block;
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     background: #ff6b9d;
     border-radius: 50%;
     animation: pulse-dot 2s ease-in-out infinite;
@@ -310,9 +310,9 @@ body::after {
     }
 }
 
-/* FRASE - MAIOR E MAIS DESTAQUE */
+/* FRASE - DESTAQUE COM MENOS ESPAÇO */
 .question-text {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     font-weight: 800;
     color: #f0e8ff;
     line-height: 1.2;
@@ -320,14 +320,14 @@ body::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     text-align: center;
-    padding: 6px 0;
+    padding: 2px 0;
 }
 
 .phrase-icon {
-    font-size: 2.4rem;
-    color: rgba(255, 107, 157, 0.15);
+    font-size: 2rem;
+    color: rgba(255, 107, 157, 0.12);
     font-weight: 300;
     line-height: 1;
     user-select: none;
@@ -335,22 +335,22 @@ body::after {
 
 .question-text .phrase-icon:first-child {
     align-self: flex-start;
-    margin-top: -4px;
+    margin-top: -2px;
 }
 
 .question-text .phrase-icon:last-child {
     align-self: flex-end;
-    margin-bottom: -4px;
+    margin-bottom: -2px;
 }
 
 /* ============================================================
-   OPÇÕES
+   OPÇÕES - ESPAÇAMENTO REDUZIDO
    ============================================================ */
 .options {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-bottom: 10px;
+    gap: 6px;
+    margin-bottom: 8px;
     flex: 1;
     justify-content: center;
     min-height: 0;
@@ -359,9 +359,9 @@ body::after {
 .option-btn {
     background: rgba(255, 255, 255, 0.02);
     border: 2px solid rgba(255, 107, 157, 0.08);
-    border-radius: 16px;
-    padding: 11px 18px;
-    font-size: 1rem;
+    border-radius: 14px;
+    padding: 10px 16px;
+    font-size: 0.95rem;
     font-weight: 500;
     color: #d0c8e8;
     cursor: pointer;
@@ -369,7 +369,7 @@ body::after {
     text-align: left;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
     font-family: inherit;
     letter-spacing: 0.2px;
     position: relative;
@@ -386,7 +386,7 @@ body::after {
     background: linear-gradient(135deg, rgba(255, 107, 157, 0.06), rgba(192, 132, 252, 0.06));
     opacity: 0;
     transition: opacity 0.3s ease;
-    border-radius: 16px;
+    border-radius: 14px;
 }
 
 .option-btn:hover:not(:disabled)::before {
@@ -397,12 +397,12 @@ body::after {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     background: rgba(255, 107, 157, 0.06);
     font-weight: 700;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     color: #9a8ab8;
     flex-shrink: 0;
     transition: all 0.3s ease;
@@ -496,19 +496,19 @@ body::after {
 }
 
 /* ============================================================
-   FEEDBACK / VÍDEO - MAIS ESPAÇO
+   FEEDBACK / VÍDEO
    ============================================================ */
 .feedback-area {
-    min-height: 50px;
+    min-height: 45px;
     max-height: 45vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background: rgba(255, 107, 157, 0.02);
-    border-radius: 18px;
-    padding: 10px 16px;
-    margin-bottom: 10px;
+    border-radius: 16px;
+    padding: 8px 14px;
+    margin-bottom: 8px;
     border: 1px dashed rgba(255, 107, 157, 0.06);
     transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
     flex-shrink: 0;
@@ -519,20 +519,20 @@ body::after {
 .feedback-area.has-feedback {
     border-color: rgba(255, 107, 157, 0.08);
     background: rgba(255, 107, 157, 0.03);
-    padding: 10px 16px 14px;
-    min-height: 60px;
+    padding: 8px 14px 12px;
+    min-height: 55px;
     max-height: 50vh;
 }
 
 .feedback-text {
     color: #9a8ab8;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 400;
     text-align: center;
     width: 100%;
-    line-height: 1.5;
+    line-height: 1.4;
     text-shadow: 0 0 20px rgba(255, 107, 157, 0.03);
-    padding: 4px 0;
+    padding: 2px 0;
 }
 
 .feedback-text strong {
@@ -541,12 +541,12 @@ body::after {
 }
 
 /* ============================================================
-   VIDEO PLAYER WRAPPER - POSIÇÃO RELATIVA PARA O BOTÃO
+   VIDEO PLAYER WRAPPER
    ============================================================ */
 .video-player-wrapper {
-    margin-top: 8px;
+    margin-top: 6px;
     width: 100%;
-    border-radius: 14px;
+    border-radius: 12px;
     overflow: hidden;
     background: #0a0a1a;
     position: relative;
@@ -558,7 +558,7 @@ body::after {
 .video-player-wrapper video {
     width: 100%;
     display: block;
-    border-radius: 12px;
+    border-radius: 10px;
     max-height: 35vh;
     object-fit: contain;
     background: #05050f;
@@ -566,8 +566,8 @@ body::after {
 
 .video-controls-hint {
     color: #5a4a7a;
-    font-size: 0.55rem;
-    margin-top: 5px;
+    font-size: 0.5rem;
+    margin-top: 4px;
     text-align: center;
     font-weight: 400;
     letter-spacing: 0.5px;
@@ -575,18 +575,18 @@ body::after {
 }
 
 /* ============================================================
-   BOTÃO PRÓXIMO - SOBREPOSTO NO VÍDEO (DENTRO DO WRAPPER)
+   BOTÃO PRÓXIMO - SOBREPOSTO NO VÍDEO
    ============================================================ */
 .video-player-wrapper .next-btn {
     position: absolute;
-    bottom: 16px;
-    right: 16px;
-    padding: 8px 20px;
+    bottom: 14px;
+    right: 14px;
+    padding: 6px 18px;
     border: none;
     border-radius: 30px;
     background: linear-gradient(135deg, #ff6b9d, #c084fc);
     color: #fff;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
@@ -609,10 +609,6 @@ body::after {
 .video-player-wrapper .next-btn.active:hover {
     transform: translateY(-2px) scale(1.05);
     box-shadow: 0 8px 30px rgba(255, 107, 157, 0.4);
-}
-
-.video-player-wrapper .next-btn.active:hover::after {
-    opacity: 1;
 }
 
 .video-player-wrapper .next-btn.active:active {
@@ -810,60 +806,60 @@ body::after {
    ============================================================ */
 @media (max-width: 768px) {
     .container {
-        padding: 18px 18px 20px;
+        padding: 16px 16px 18px;
         border-radius: 32px;
         max-height: 94vh;
     }
 
     .header h1 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .progress-badge {
-        font-size: 0.6rem;
-        padding: 4px 12px;
+        font-size: 0.55rem;
+        padding: 3px 10px;
     }
 
     .question-text {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     .phrase-icon {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .question-card {
-        padding: 14px 16px 12px;
-        border-radius: 18px;
-        margin-bottom: 10px;
-    }
-
-    .question-label {
-        font-size: 0.55rem;
-    }
-
-    .option-btn {
-        font-size: 0.9rem;
-        padding: 10px 14px;
-        gap: 10px;
-        border-radius: 14px;
-    }
-
-    .option-btn .letter {
-        width: 24px;
-        height: 24px;
-        font-size: 0.6rem;
-    }
-
-    .feedback-area {
-        padding: 8px 12px;
-        min-height: 40px;
-        border-radius: 14px;
+        padding: 10px 14px 8px;
+        border-radius: 16px;
         margin-bottom: 8px;
     }
 
+    .question-label {
+        font-size: 0.5rem;
+    }
+
+    .option-btn {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+        gap: 10px;
+        border-radius: 12px;
+    }
+
+    .option-btn .letter {
+        width: 22px;
+        height: 22px;
+        font-size: 0.55rem;
+    }
+
+    .feedback-area {
+        padding: 6px 10px;
+        min-height: 35px;
+        border-radius: 12px;
+        margin-bottom: 6px;
+    }
+
     .feedback-text {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 
     .video-player-wrapper video {
@@ -871,10 +867,10 @@ body::after {
     }
 
     .video-player-wrapper .next-btn {
-        padding: 6px 16px;
-        font-size: 0.75rem;
-        bottom: 12px;
-        right: 12px;
+        padding: 5px 14px;
+        font-size: 0.7rem;
+        bottom: 10px;
+        right: 10px;
     }
 
     .final-screen h2 {
@@ -893,94 +889,94 @@ body::after {
 
 @media (max-width: 480px) {
     .container {
-        padding: 12px 12px 16px;
+        padding: 10px 10px 14px;
         border-radius: 24px;
         max-height: 96vh;
     }
 
     .header {
-        margin-bottom: 8px;
-        padding-bottom: 6px;
+        margin-bottom: 6px;
+        padding-bottom: 5px;
     }
 
     .header h1 {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .header h1 span {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 
     .progress-badge {
-        font-size: 0.5rem;
-        padding: 3px 8px;
+        font-size: 0.45rem;
+        padding: 2px 8px;
     }
 
     .progress-bar-wrap {
         height: 3px;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     .question-label {
-        font-size: 0.45rem;
-        margin-bottom: 5px;
+        font-size: 0.4rem;
+        margin-bottom: 4px;
     }
 
     .question-text {
-        font-size: 1.2rem;
-        gap: 6px;
-        padding: 2px 0;
+        font-size: 1.1rem;
+        gap: 4px;
+        padding: 1px 0;
     }
 
     .phrase-icon {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .question-card {
-        padding: 10px 12px 10px;
-        border-radius: 14px;
-        margin-bottom: 8px;
+        padding: 8px 10px 8px;
+        border-radius: 12px;
+        margin-bottom: 6px;
     }
 
     .options {
-        gap: 5px;
-        margin-bottom: 8px;
+        gap: 4px;
+        margin-bottom: 6px;
     }
 
     .option-btn {
-        font-size: 0.75rem;
-        padding: 8px 12px;
-        gap: 8px;
-        border-radius: 12px;
+        font-size: 0.7rem;
+        padding: 6px 10px;
+        gap: 6px;
+        border-radius: 10px;
         border-width: 1.5px;
     }
 
     .option-btn .letter {
-        width: 20px;
-        height: 20px;
-        font-size: 0.5rem;
+        width: 18px;
+        height: 18px;
+        font-size: 0.45rem;
     }
 
     .feedback-area {
-        padding: 6px 10px;
-        min-height: 35px;
-        border-radius: 12px;
-        margin-bottom: 6px;
+        padding: 4px 8px;
+        min-height: 30px;
+        border-radius: 10px;
+        margin-bottom: 4px;
         border-width: 1px;
     }
 
     .feedback-area.has-feedback {
-        padding: 6px 10px 10px;
-        min-height: 50px;
+        padding: 4px 8px 8px;
+        min-height: 40px;
     }
 
     .feedback-text {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
     }
 
     .video-player-wrapper {
         border-radius: 10px;
-        margin-top: 6px;
+        margin-top: 4px;
         max-height: 30vh;
     }
 
@@ -990,20 +986,20 @@ body::after {
     }
 
     .video-player-wrapper .next-btn {
-        padding: 5px 12px;
-        font-size: 0.65rem;
-        bottom: 10px;
-        right: 10px;
+        padding: 4px 10px;
+        font-size: 0.6rem;
+        bottom: 8px;
+        right: 8px;
         border-radius: 20px;
     }
 
     .video-controls-hint {
-        font-size: 0.45rem;
-        margin-top: 3px;
+        font-size: 0.4rem;
+        margin-top: 2px;
     }
 
     .final-screen {
-        padding: 10px 12px 6px;
+        padding: 8px 10px 4px;
     }
 
     .final-screen .trophy {
@@ -1043,108 +1039,41 @@ body::after {
 
 @media (max-height: 700px) {
     .container {
-        padding: 14px 18px 16px;
+        padding: 12px 16px 14px;
         max-height: 98vh;
     }
 
     .header {
-        margin-bottom: 8px;
-        padding-bottom: 6px;
+        margin-bottom: 6px;
+        padding-bottom: 5px;
     }
 
     .header h1 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .progress-badge {
-        font-size: 0.55rem;
-        padding: 3px 10px;
-    }
-
-    .progress-bar-wrap {
-        height: 3px;
-        margin-bottom: 10px;
-    }
-
-    .question-card {
-        padding: 10px 14px 8px;
-        margin-bottom: 8px;
-        border-radius: 14px;
-    }
-
-    .question-text {
-        font-size: 1.2rem;
-    }
-
-    .phrase-icon {
-        font-size: 1.4rem;
-    }
-
-    .question-label {
-        font-size: 0.45rem;
-        margin-bottom: 4px;
-    }
-
-    .options {
-        gap: 5px;
-        margin-bottom: 6px;
-    }
-
-    .option-btn {
-        padding: 7px 14px;
-        font-size: 0.8rem;
-        border-radius: 12px;
-        gap: 10px;
-    }
-
-    .option-btn .letter {
-        width: 22px;
-        height: 22px;
-        font-size: 0.55rem;
-    }
-
-    .feedback-area {
-        padding: 6px 10px;
-        min-height: 30px;
-        margin-bottom: 6px;
-        border-radius: 12px;
-    }
-
-    .feedback-text {
-        font-size: 0.7rem;
-    }
-
-    .video-player-wrapper video {
-        max-height: 25vh;
-    }
-}
-
-@media (max-height: 500px) and (orientation: landscape) {
-    .container {
-        padding: 8px 14px 10px;
-        max-height: 98vh;
-        border-radius: 18px;
-        max-width: 95vw;
-    }
-
-    .header h1 {
-        font-size: 0.8rem;
-    }
-
-    .progress-badge {
-        font-size: 0.45rem;
+        font-size: 0.5rem;
         padding: 2px 8px;
     }
 
     .progress-bar-wrap {
-        height: 2px;
-        margin-bottom: 6px;
+        height: 3px;
+        margin-bottom: 8px;
     }
 
     .question-card {
-        padding: 6px 12px 6px;
-        margin-bottom: 4px;
-        border-radius: 10px;
+        padding: 8px 12px 6px;
+        margin-bottom: 6px;
+        border-radius: 12px;
+    }
+
+    .question-text {
+        font-size: 1.1rem;
+    }
+
+    .phrase-icon {
+        font-size: 1.2rem;
     }
 
     .question-label {
@@ -1152,51 +1081,125 @@ body::after {
         margin-bottom: 3px;
     }
 
-    .question-text {
-        font-size: 0.9rem;
-    }
-
-    .phrase-icon {
-        font-size: 0.9rem;
-    }
-
     .options {
-        gap: 3px;
-        margin-bottom: 4px;
+        gap: 4px;
+        margin-bottom: 5px;
     }
 
     .option-btn {
-        padding: 5px 10px;
-        font-size: 0.65rem;
-        border-radius: 8px;
-        gap: 6px;
-        border-width: 1.5px;
+        padding: 6px 12px;
+        font-size: 0.75rem;
+        border-radius: 10px;
+        gap: 8px;
     }
 
     .option-btn .letter {
-        width: 16px;
-        height: 16px;
-        font-size: 0.45rem;
+        width: 20px;
+        height: 20px;
+        font-size: 0.5rem;
     }
 
     .feedback-area {
         padding: 4px 8px;
         min-height: 25px;
         margin-bottom: 4px;
-        border-radius: 8px;
-    }
-
-    .feedback-area.has-feedback {
-        padding: 4px 8px 6px;
-        min-height: 30px;
+        border-radius: 10px;
     }
 
     .feedback-text {
+        font-size: 0.65rem;
+    }
+
+    .video-player-wrapper video {
+        max-height: 25vh;
+    }
+
+    .video-player-wrapper .next-btn {
+        padding: 4px 12px;
+        font-size: 0.65rem;
+        bottom: 8px;
+        right: 8px;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .container {
+        padding: 6px 12px 8px;
+        max-height: 98vh;
+        border-radius: 16px;
+        max-width: 95vw;
+    }
+
+    .header h1 {
+        font-size: 0.7rem;
+    }
+
+    .progress-badge {
+        font-size: 0.4rem;
+        padding: 2px 6px;
+    }
+
+    .progress-bar-wrap {
+        height: 2px;
+        margin-bottom: 4px;
+    }
+
+    .question-card {
+        padding: 4px 10px 4px;
+        margin-bottom: 4px;
+        border-radius: 8px;
+    }
+
+    .question-label {
+        font-size: 0.35rem;
+        margin-bottom: 2px;
+    }
+
+    .question-text {
+        font-size: 0.85rem;
+    }
+
+    .phrase-icon {
+        font-size: 0.8rem;
+    }
+
+    .options {
+        gap: 2px;
+        margin-bottom: 3px;
+    }
+
+    .option-btn {
+        padding: 4px 8px;
         font-size: 0.6rem;
+        border-radius: 8px;
+        gap: 5px;
+        border-width: 1.5px;
+    }
+
+    .option-btn .letter {
+        width: 14px;
+        height: 14px;
+        font-size: 0.4rem;
+    }
+
+    .feedback-area {
+        padding: 3px 6px;
+        min-height: 20px;
+        margin-bottom: 3px;
+        border-radius: 6px;
+    }
+
+    .feedback-area.has-feedback {
+        padding: 3px 6px 5px;
+        min-height: 25px;
+    }
+
+    .feedback-text {
+        font-size: 0.55rem;
     }
 
     .video-player-wrapper {
-        margin-top: 4px;
+        margin-top: 3px;
         max-height: 25vh;
     }
 
@@ -1205,15 +1208,15 @@ body::after {
     }
 
     .video-player-wrapper .next-btn {
-        padding: 4px 10px;
-        font-size: 0.55rem;
-        bottom: 8px;
-        right: 8px;
+        padding: 3px 8px;
+        font-size: 0.5rem;
+        bottom: 6px;
+        right: 6px;
         border-radius: 16px;
     }
 
     .video-controls-hint {
-        font-size: 0.4rem;
+        font-size: 0.35rem;
         margin-top: 2px;
     }
 }
