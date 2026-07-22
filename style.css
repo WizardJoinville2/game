@@ -378,24 +378,24 @@ body::after {
 }
 
 .option-btn.correct {
-    border-color: rgba(168, 85, 247, 0.55);
-    background: rgba(168, 85, 247, 0.16);
-    box-shadow: 0 12px 32px rgba(168, 85, 247, 0.18);
+    border-color: rgba(56, 211, 146, 0.7);
+    background: rgba(52, 211, 153, 0.16);
+    box-shadow: 0 12px 32px rgba(52, 211, 153, 0.18);
 }
 
 .option-btn.correct .letter {
-    background: linear-gradient(135deg, var(--accent-2), var(--accent-3));
+    background: linear-gradient(135deg, #34d399, #10b981);
     color: white;
 }
 
 .option-btn.wrong {
-    border-color: rgba(255, 95, 162, 0.45);
-    background: rgba(255, 95, 162, 0.12);
-    box-shadow: 0 12px 30px rgba(255, 95, 162, 0.12);
+    border-color: rgba(248, 113, 113, 0.7);
+    background: rgba(248, 113, 113, 0.14);
+    box-shadow: 0 12px 30px rgba(248, 113, 113, 0.18);
 }
 
 .option-btn.wrong .letter {
-    background: linear-gradient(135deg, var(--accent), #ff7aa7);
+    background: linear-gradient(135deg, #f87171, #ef4444);
     color: white;
 }
 
@@ -418,8 +418,10 @@ body::after {
 
 .feedback-area.has-feedback {
     padding: 12px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
-    border-color: rgba(255, 255, 255, 0.14);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.05));
+    border-color: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
 }
 
 .feedback-text {
@@ -492,8 +494,8 @@ body::after {
 .video-player-wrapper {
     position: relative;
     width: 100%;
-    min-height: clamp(210px, 38vh, 320px);
-    max-height: clamp(240px, 44vh, 360px);
+    min-height: clamp(210px, 42vh, 360px);
+    max-height: clamp(260px, 50vh, 430px);
     border-radius: 18px;
     overflow: hidden;
     background: #04020a;
@@ -502,6 +504,7 @@ body::after {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
 }
 
 .video-overlay {
