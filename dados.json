@@ -16,8 +16,8 @@
             "id": 3,
             "portuguese": "Como se diz: \"Você é incrível do jeito que você é\"?",
             "options": [
-                "You are amazing Just the Way You Are",
-                "You is amazing Just the Way You is",
+                "You are incredible the mean You Are",
+                "You is amazing the Way You is",
                 "Your amazing Just the Way Your"
             ],
             "correctIndex": 0,
@@ -30,8 +30,8 @@
             "portuguese": "Como se diz: \"Eu sinto mais sua falta do que da própria vida\"?",
             "options": [
                 "I miss you more than life",
-                "I lose you more than life",
-                "I miss your more than health"
+                "I feel your miss more than my own life",
+                "I feel more your miss than life"
             ],
             "correctIndex": 0,
             "videoUrl": "Justin Bieber - Ghost_0f7d1dc2_cortado_20260717_113152.mp4",
@@ -43,9 +43,9 @@
             "english": "",
             "portuguese": "Como se diz: \"Eu estou apaixonado pelas suas curvas\"?",
             "options": [
-                "I am in love with the shape of you",
+                "I'm in love with the shape of you",
                 "I am loving the form of yours",
-                "I love in the shape from you"
+                "I love your shape and your curves"
             ],
             "correctIndex": 0,
             "videoUrl": "Ed Sheeran - Shape of You (Official Music Video)_4e7c8792_cortado_20260717_113958.mp4",
@@ -54,12 +54,12 @@
         },
         {
             "id": 9,
-            "english": "I'll be needin' stitches",
+            "english": "I'll be needing stitches",
             "portuguese": "Como se diz: \"Eu vou precisar de pontos\"?",
             "options": [
-                "I'll be needin' stitches",
-                "I Will been needing stiches",
-                "I'll be need stitches"
+                "I'll be needing stitches",
+                "I need points",
+                "I will have dots"
             ],
             "correctIndex": 0,
             "videoUrl": "Shawn Mendes - Stitches (Official Music Video)_50edee92_cortado_20260717_114940.mp4",
@@ -72,8 +72,8 @@
             "portuguese": "Como se diz: \"Não importa o que eu faça\"?",
             "options": [
                 "No matter what I do",
-                "No matter what I does",
-                "No matter what I doing"
+                "No what I does",
+                "No important what I do"
             ],
             "correctIndex": 0,
             "videoUrl": "Nelly - Dilemma (Official Music Video) ft. Kelly Rowland_39bbb2ea_cortado_20260717_122747.mp4",
@@ -86,8 +86,8 @@
             "portuguese": "Como se diz: \"Tô com um pressentimento\"?",
             "options": [
                 "I gotta feeling",
-                "I got a feel",
-                "I gotta felt"
+                "I have a presentiment",
+                "I'm having a hunch"
             ],
             "correctIndex": 0,
             "videoUrl": "The Black Eyed Peas - I Gotta Feeling (Official Music Video)_c777a670_cortado_20260717_122115.mp4",
@@ -100,8 +100,8 @@
             "portuguese": "Como se diz: \"Tô nem ai, eu amo isso\"?",
             "options": [
                 "I don't care, I love it",
-                "I not care, I love it",
-                "I don't care, I loved it"
+                "I'm not there, I love",
+                "I'm not here, I love this"
             ],
             "correctIndex": 0,
             "videoUrl": "Icona Pop - I Love It (feat. Charli XCX) [OFFICIAL VIDEO]_aa60c474_cortado_20260717_123141.mp4",
@@ -114,8 +114,8 @@
             "portuguese": "Como se diz: \"O que você quer dizer?\"?",
             "options": [
                 "What do you mean?",
-                "What does you mean?",
-                "What do you means?"
+                "What do you wants?",
+                "What does that mean?"
             ],
             "correctIndex": 0,
             "videoUrl": "Justin Bieber - What Do You Mean？ (Lyric Video)_ecd66f1c_cortado_20260717_124032.mp4",
@@ -128,8 +128,8 @@
             "portuguese": "Como se diz: \"Você é meu porto seguro\"?",
             "options": [
                 "You're my wonderwall",
-                "Your my wonderwall",
-                "You're my wonder wall"
+                "Your my secure port",
+                "You is my safe harbor"
             ],
             "correctIndex": 0,
             "videoUrl": "Oasis - Wonderwall (Official Video)_f5accb41_cortado_20260717_124719.mp4",
@@ -142,8 +142,8 @@
             "portuguese": "Como se diz: \"Eu só quero que você saiba quem eu sou\"?",
             "options": [
                 "I just want you to know who I am",
-                "I just want you know who I am",
-                "I just want you to know who am I"
+                "I want that you know who are you",
+                "I want to know who I am"
             ],
             "correctIndex": 0,
             "videoUrl": "Goo Goo Dolls – Iris [Official Music Video] [4K Remaster]_d5b8a4ed_cortado_20260721_132047.mp4",
@@ -184,8 +184,8 @@
             "portuguese": "Como se diz: \"Pela última vez\"?",
             "options": [
                 "One last time",
-                "One more time",
-                "Last one time"
+                "A more time",
+                "Last time"
             ],
             "correctIndex": 0,
             "videoUrl": "Ariana Grande - One Last Time (Official Video)_6afa58d6_cortado_20260717_131702.mp4",
