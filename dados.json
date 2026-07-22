@@ -16,10 +16,9 @@
             "id": 3,
             "portuguese": "Como se diz: \"Você é incrível do jeito que você é\"?",
             "options": [
-                "Your amazing Just the Way Your",
                 "You are incredible the mean You Are",
-                "You is amazing the Way You is"
-                
+                "You is amazing the Way You is",
+                "Your amazing Just the Way Your"
             ],
             "correctIndex": 0,
             "videoUrl": "Bruno Mars - Just The Way You Are (Official Music Video)_a6c528a1_cortado_20260717_110625.mp4",
@@ -192,6 +191,132 @@
             "videoUrl": "Ariana Grande - One Last Time (Official Video)_6afa58d6_cortado_20260717_131702.mp4",
             "songTitle": "One Last Time",
             "artist": "Ariana Grande"
+        },
+        {
+            "id": 26,
+            "english": "I'm on the deep end, watch as I dive in.",
+            "portuguese": "Como se diz: \"Tô me jogando de cabeça. Olha só.\"?",
+            "options": [
+                "I'm on the deep end, watch as I dive in.",
+                "I'm trowing myself in the deep, look at me.",
+                "I'm jumping with my head in the water, look at me."
+            ],
+            "correctIndex": 0,
+            "videoUrl": "Lady Gaga, Bradley Cooper - Shallow (from A Star Is Born) (Official Music Video)_6b6d4d5b_cortado_20260722_150608.mp4",
+            "songTitle": "Shallow",
+            "artist": "Lady Gaga & Bradley Cooper"
+        },
+        {
+            "id": 29,
+            "english": "You can stand under my umbrella",
+            "portuguese": "Como se diz: \"Você pode ficar embaixo do meu guarda-chuva\"?",
+            "options": [
+                "You can stand under my umbrella",
+                "You can be my umbrella",
+                "You can run under my umbrella"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "Rihanna - Umbrella (Orange Version) (Official Music Video) ft. JAŸ-Z_f8f21764_cortado_20260722_145927.mp4",
+            "songTitle": "Umbrella",
+            "artist": "Rihanna"
+        },
+        {
+            "id": 30,
+            "english": "Because I'm happy",
+            "portuguese": "Como se diz: \"Porque estou feliz\"?",
+            "options": [
+                "Because I'm happy",
+                "Because I'm glad",
+                "Because I'm cheerful"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "Pharrell Williams - Happy (Official Video)_8dc8ee78_cortado_20260722_150855.mp4",
+            "songTitle": "Happy",
+            "artist": "Pharrell Williams"
+        },
+        {
+            "id": 27,
+            "english": "You want me, I want you, baby",
+            "portuguese": "Como se diz: \"Você me quer, eu quero você, baby\"?",
+            "options": [
+                "You want me, I want you, baby",
+                "You need me, I need you, baby",
+                "You love me, I love you, baby"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "Dua Lipa - Levitating Featuring DaBaby (Official Music Video)_362e9027_cortado_20260722_145724.mp4",
+            "songTitle": "Levitating",
+            "artist": "Dua Lipa"
+        },
+        {
+            "id": 31,
+            "english": "I'm blinded by the lights",
+            "portuguese": "Como se diz: \"Essas luzes tão me cegando\"?",
+            "options": [
+                "I'm blinded by the lights",
+                "That lights are blind",
+                "I'm blinded because of the light"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "The Weeknd - Blinding Lights (Official Video)_bc300693_cortado_20260722_151830.mp4",
+            "songTitle": "Blinding Lights",
+            "artist": "The Weeknd"
+        },
+        {
+            "id": 36,
+            "english": "I'm the bad guy, duh",
+            "portuguese": "Como se diz: \"Eu sou o vilão, ué\"?",
+            "options": [
+                "I'm the bad guy, duh",
+                "I'm a bad man, duh",
+                "I'm the evil, duh"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "Billie Eilish - bad guy_fd49e8ea_cortado_20260722_152855.mp4",
+            "songTitle": "Bad Guy",
+            "artist": "Billie Eilish"
+        },
+        {
+            "id": 38,
+            "english": "Mama! Ooh!\nDidn't mean to make you cry",
+            "portuguese": "Como se diz: \"Mãe! Ooh!\nNão quis fazer você chorar\"?",
+            "options": [
+                "Mama! Ooh!\nDidn't mean to make you cry",
+                "Mama! Ooh!\nI didn't want to you to cry",
+                "Mama! Ooh!\nI not want to make you sad"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "Queen – Bohemian Rhapsody (Official Video Remastered)_74b26035_cortado_20260722_153730.mp4",
+            "songTitle": "Bohemian Rhapsody",
+            "artist": "Queen"
+        },
+        {
+            "id": 42,
+            "english": "Hello, it's me",
+            "portuguese": "Como se diz: \"Alô, sou eu.\"?",
+            "options": [
+                "Hello, it's me",
+                "Hello is I",
+                "Hi I'm"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "Adele - Hello (Official Music Video)_47ebf83f_cortado_20260722_154959.mp4",
+            "songTitle": "Hello",
+            "artist": "Adele"
+        },
+        {
+            "id": 49,
+            "english": "I will always love you",
+            "portuguese": "Como se diz: \"Eu sempre vou te amar\"?",
+            "options": [
+                "I will always love you",
+                "I forever love you",
+                "I ever love you"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "Whitney Houston - I Will Always Love You (Official 4K Video)_46fb0e2b_cortado_20260722_155426.mp4",
+            "songTitle": "I Will Always Love You",
+            "artist": "Whitney Houston"
         }
     ]
 }
