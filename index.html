@@ -276,13 +276,21 @@
 
                     if (isCorrect) {
                         feedbackText.innerHTML = `
-                                    ✅ <strong>Acertou!</strong> "${correctPhrase}" — 🎬 <strong>${songTitle}</strong>
-                                    <br><span class="feedback-highlight">🔥 Série atual: ${streakCount}</span>
+                                    <div class="feedback-result correct">
+                                        <span class="icon">✅</span>
+                                        <span>Acertou!</span>
+                                    </div>
+                                    <div>"${correctPhrase}" — 🎬 <strong>${songTitle}</strong></div>
+                                    <div class="feedback-highlight">🔥 Série atual: ${streakCount}</div>
                                 `;
                     } else {
                         feedbackText.innerHTML = `
-                                    ❌ <strong>Ops!</strong> A resposta certa é: <strong>${correctPhrase}</strong> — 🎬 <strong>${songTitle}</strong>
-                                    <br><span class="feedback-highlight">💫 Série reiniciada</span>
+                                    <div class="feedback-result wrong">
+                                        <span class="icon">❌</span>
+                                        <span>Errou!</span>
+                                    </div>
+                                    <div>A resposta certa era: <strong>${correctPhrase}</strong> — 🎬 <strong>${songTitle}</strong></div>
+                                    <div class="feedback-highlight">💫 Série reiniciada</div>
                                 `;
                     }
 
