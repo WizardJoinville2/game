@@ -194,10 +194,10 @@
         },
         {
             "id": 26,
-            "english": "I'm on the deep end, watch as I dive in.",
+            "english": "I'm off the deep end, watch as I dive in.",
             "portuguese": "Como se diz: \"Tô me jogando de cabeça. Olha só.\"?",
             "options": [
-                "I'm on the deep end, watch as I dive in.",
+                "I'm off the deep end, watch as I dive in.",
                 "I'm trowing myself in the deep, look at me.",
                 "I'm jumping with my head in the water, look at me."
             ],
