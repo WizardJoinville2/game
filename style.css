@@ -631,20 +631,24 @@ body::after {
 
 @media (max-width: 760px) {
     body {
-        padding: 10px;
+        padding: 8px;
         align-items: stretch;
+        overflow-y: auto;
     }
 
     .container {
+        width: 100%;
         height: auto;
-        min-height: auto;
+        min-height: 100vh;
         max-height: none;
+        border-radius: 20px;
     }
 
     .header {
         flex-direction: column;
         align-items: flex-start;
-        padding: 16px 16px 12px;
+        padding: 14px 14px 10px;
+        gap: 8px;
     }
 
     .header-meta {
@@ -653,59 +657,131 @@ body::after {
     }
 
     .progress-bar-wrap {
-        margin: 0 16px 4px;
+        margin: 0 14px 6px;
     }
 
     #mainContent {
-        padding: 12px 16px 16px;
+        padding: 10px 14px 14px;
+        gap: 10px;
     }
 }
 
 @media (max-width: 540px) {
+    body {
+        padding: 6px;
+    }
+
+    .ambient {
+        display: none;
+    }
+
     .brand-group {
         align-items: flex-start;
     }
 
     .brand-icon {
-        width: 42px;
-        height: 42px;
-        border-radius: 14px;
-    }
-
-    .header h1 {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
         font-size: 1rem;
     }
 
+    .header h1 {
+        font-size: 0.95rem;
+    }
+
     .header p {
-        font-size: 0.76rem;
+        font-size: 0.7rem;
     }
 
     .meta-pill,
     .progress-badge {
-        padding: 7px 10px;
-        font-size: 0.72rem;
+        padding: 6px 9px;
+        font-size: 0.66rem;
     }
 
     .question-card {
-        padding: 14px 14px;
+        padding: 12px 12px;
+    }
+
+    .question-label {
+        font-size: 0.62rem;
+        margin-bottom: 6px;
+    }
+
+    .question-text {
+        font-size: 0.95rem;
+        line-height: 1.25;
+    }
+
+    .phrase-icon {
+        font-size: 1rem;
     }
 
     .option-btn {
-        padding: 12px 14px;
-        gap: 10px;
+        padding: 10px 12px;
+        gap: 8px;
+        border-radius: 14px;
     }
 
     .option-btn .letter {
-        width: 28px;
-        height: 28px;
-        font-size: 0.74rem;
+        width: 26px;
+        height: 26px;
+        font-size: 0.7rem;
+    }
+
+    .option-btn .option-text {
+        font-size: 0.84rem;
+    }
+
+    .feedback-area {
+        padding: 8px 10px;
+        border-radius: 14px;
+    }
+
+    .feedback-text {
+        font-size: 0.8rem;
+    }
+
+    .feedback-area .feedback-result {
+        padding: 8px 10px;
+        font-size: 0.84rem;
     }
 
     .video-player-wrapper {
-        min-height: 190px;
+        min-height: 170px;
+        max-height: 220px;
     }
 
     .video-player-wrapper video {
-        min-height: 190px;
+        min-height: 170px;
+    }
+
+    .video-overlay {
+        font-size: 0.65rem;
+        padding: 6px 8px;
+    }
+
+    .video-player-wrapper .next-btn {
+        padding: 7px 12px;
+        font-size: 0.76rem;
+        top: 8px;
+        right: 8px;
+    }
+
+    .final-screen {
+        padding: 12px 8px;
+    }
+
+    .final-screen h2 {
+        font-size: 1.1rem;
+    }
+
+    .final-screen p {
+        font-size: 0.84rem;
+    }
+
+    .final-screen .score-display {
+        font-size: 0.95rem;
     }
 }
