@@ -8,23 +8,34 @@
 </head>
 <body>
 
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
     <div class="container" id="app">
-        <!-- HEADER -->
         <div class="header">
-            <h1>🎵 <span>Synth</span>Learn</h1>
-            <div class="progress-badge" id="progressBadge">1 / 5</div>
+            <div class="brand-group">
+                <div class="brand-icon">♪</div>
+                <div>
+                    <h1>🎵 <span>Synth</span>Learn</h1>
+                    <p>Aprenda inglês com clipes, ritmo e desafio</p>
+                </div>
+            </div>
+
+            <div class="header-meta">
+                <div class="meta-pill" id="streakBadge">🔥 Série 0</div>
+                <div class="meta-pill accent" id="scoreBadge">⭐ 0 acertos</div>
+                <div class="progress-badge" id="progressBadge">1 / 5</div>
+            </div>
         </div>
 
-        <!-- BARRA DE PROGRESSO -->
         <div class="progress-bar-wrap">
             <div class="progress-bar-fill" id="progressFill"></div>
         </div>
 
-        <!-- ÁREA PRINCIPAL (dinâmica) -->
         <div id="mainContent">
             <div class="loading">
                 <div class="spinner"></div>
-                <p>Carregando vídeos...</p>
+                <p>Carregando vídeos e perguntas...</p>
             </div>
         </div>
     </div>
@@ -40,10 +51,13 @@
         let correctCount = 0;
         let totalLessons = 0;
         let totalAnswered = 0;
+        let streakCount = 0;
 
         const mainContent = document.getElementById('mainContent');
         const progressBadge = document.getElementById('progressBadge');
         const progressFill = document.getElementById('progressFill');
+        const streakBadge = document.getElementById('streakBadge');
+        const scoreBadge = document.getElementById('scoreBadge');
 
         // ============================================================
         //  FUNÇÃO PARA LIMPAR A FRASE
@@ -104,7 +118,9 @@
             currentIndex = 0;
             totalAnswered = 0;
             correctCount = 0;
+            streakCount = 0;
             answered = false;
+            updateHeaderStats();
             renderQuestion();
         }
 
@@ -125,6 +141,11 @@
         function createVideoPlayer(videoUrl, thumbnail = null) {
             const wrapper = document.createElement('div');
             wrapper.className = 'video-player-wrapper';
+
+            const overlay = document.createElement('div');
+            overlay.className = 'video-overlay';
+            overlay.innerHTML = '<span>🎬 Agora é hora de conferir</span>';
+            wrapper.appendChild(overlay);
 
             const video = document.createElement('video');
             video.controls = true;
@@ -219,6 +240,7 @@
 
             mainContent.innerHTML = html;
             updateProgress();
+            updateHeaderStats();
 
             const optionBtns = document.querySelectorAll('.option-btn');
             const feedbackText = document.getElementById('feedbackText');
@@ -240,11 +262,14 @@
 
                     if (!isCorrect) {
                         this.classList.add('wrong');
+                        streakCount = 0;
                     } else {
                         correctCount++;
+                        streakCount++;
                     }
 
                     answered = true;
+                    updateHeaderStats();
 
                     const songTitle = lesson.songTitle || 'Música';
                     const correctPhrase = lesson.options[lesson.correctIndex];
@@ -252,10 +277,12 @@
                     if (isCorrect) {
                         feedbackText.innerHTML = `
                                     ✅ <strong>Acertou!</strong> "${correctPhrase}" — 🎬 <strong>${songTitle}</strong>
+                                    <br><span class="feedback-highlight">🔥 Série atual: ${streakCount}</span>
                                 `;
                     } else {
                         feedbackText.innerHTML = `
                                     ❌ <strong>Ops!</strong> A resposta certa é: <strong>${correctPhrase}</strong> — 🎬 <strong>${songTitle}</strong>
+                                    <br><span class="feedback-highlight">💫 Série reiniciada</span>
                                 `;
                     }
 
@@ -320,6 +347,7 @@
             mainContent.innerHTML = html;
             progressBadge.textContent = `🎉 Fim!`;
             progressFill.style.width = '100%';
+            updateHeaderStats();
 
             document.getElementById('restartBtn').addEventListener('click', () => {
                 iniciarNovoJogo();
@@ -329,9 +357,19 @@
         // ============================================================
         //  ATUALIZAR PROGRESSO
         // ============================================================
+        function updateHeaderStats() {
+            if (streakBadge) {
+                streakBadge.textContent = `🔥 Série ${streakCount}`;
+            }
+            if (scoreBadge) {
+                scoreBadge.textContent = `⭐ ${correctCount} acertos`;
+            }
+        }
+
         function updateProgress() {
-            progressBadge.textContent = `${totalAnswered + 1} / ${totalLessons}`;
-            const percent = (totalAnswered / totalLessons) * 100;
+            const safeTotal = totalLessons || 1;
+            progressBadge.textContent = `${Math.min(totalAnswered + 1, safeTotal)} / ${safeTotal}`;
+            const percent = safeTotal > 0 ? (totalAnswered / safeTotal) * 100 : 0;
             progressFill.style.width = `${percent}%`;
         }
 
