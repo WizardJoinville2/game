@@ -17,7 +17,7 @@
                 <div class="brand-icon">♪</div>
                 <div>
                     <h1>🎵 <span>Synth</span>Learn</h1>
-                    <p>Learn English with musics</p>
+                    <p>Aprenda inglês com clipes, ritmo e desafio</p>
                 </div>
             </div>
 
@@ -252,16 +252,27 @@
                 btn.addEventListener('click', function(e) {
                     if (answered) return;
                     const isCorrect = this.dataset.correct === 'true';
+                    const chosenBtn = this;
 
-                    optionBtns.forEach(b => b.disabled = true);
                     optionBtns.forEach(b => {
+                        b.disabled = true;
                         if (b.dataset.correct === 'true') {
                             b.classList.add('correct');
+                        }
+
+                        if (isCorrect) {
+                            if (b.dataset.correct !== 'true') {
+                                b.style.display = 'none';
+                            }
+                        } else {
+                            if (b !== chosenBtn && b.dataset.correct !== 'true') {
+                                b.style.display = 'none';
+                            }
                         }
                     });
 
                     if (!isCorrect) {
-                        this.classList.add('wrong');
+                        chosenBtn.classList.add('wrong');
                         streakCount = 0;
                     } else {
                         correctCount++;
