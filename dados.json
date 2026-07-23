@@ -3,390 +3,446 @@
         {
             "id": 1,
             "portuguese": "Como se diz: \"Eu fiz de novo\"?",
-            "options": [
-                "I did it again",
-                "I do it again",
-                "I made it again"
-            ],
+            "options": ["I did it again", "I do it again", "I made it again"],
             "correctIndex": 0,
             "videoUrl": "Britney Spears - Oops!...I Did It Again (Official HD Video)_0506b9a5_cortado_20260717_104344.mp4",
-            "songTitle": "Oops!... I Did It Again - Britney Spears"
+            "songTitle": "Oops!... I Did It Again - Britney Spears",
+            "dictionary": {
+                "literal": "Eu fiz de novo",
+                "usage": "Usado quando você repete uma ação, especialmente algo que já aconteceu antes",
+                "explanation": "'Did' é o passado de 'do' (fazer). 'Again' significa 'de novo/novamente'.",
+                "example": "I did it again! I forgot my keys. (Eu fiz de novo! Esqueci minhas chaves.)"
+            }
         },
         {
             "id": 3,
             "portuguese": "Como se diz: \"Você é incrível do jeito que você é\"?",
-            "options": [
-                "You are incredible the mean You Are",
-                "You is amazing the Way You is",
-                "Your amazing Just the Way Your"
-            ],
+            "options": ["You are incredible the mean You Are", "You is amazing the Way You is", "Your amazing Just the Way Your"],
             "correctIndex": 0,
             "videoUrl": "Bruno Mars - Just The Way You Are (Official Music Video)_a6c528a1_cortado_20260717_110625.mp4",
-            "songTitle": "Just the Way You Are - Bruno Mars"
+            "songTitle": "Just the Way You Are - Bruno Mars",
+            "dictionary": {
+                "literal": "Você é incrível do jeito que você é",
+                "usage": "Usado para elogiar alguém exatamente como ela é, sem mudanças",
+                "explanation": "'Just the way you are' significa 'exatamente do jeito que você é'.",
+                "example": "I love you just the way you are. (Eu te amo exatamente do jeito que você é.)"
+            }
         },
         {
             "id": 7,
             "english": "I miss you more than life",
             "portuguese": "Como se diz: \"Eu sinto mais sua falta do que da própria vida\"?",
-            "options": [
-                "I miss you more than life",
-                "I feel your miss more than my own life",
-                "I feel more your miss than life"
-            ],
+            "options": ["I miss you more than life", "I feel your miss more than my own life", "I feel more your miss than life"],
             "correctIndex": 0,
             "videoUrl": "Justin Bieber - Ghost_0f7d1dc2_cortado_20260717_113152.mp4",
             "songTitle": "Ghost",
-            "artist": "Justin Bieber"
+            "artist": "Justin Bieber",
+            "dictionary": {
+                "literal": "Eu sinto mais sua falta do que a vida",
+                "usage": "Usado para dizer que sente MUITA falta de alguém",
+                "explanation": "'Miss' pode ser verbo (sentir falta) ou substantivo (falta). Aqui é verbo. 'More than life' é uma hipérbole (exagero).",
+                "example": "I miss you more than life itself. (Eu sinto mais sua falta do que a própria vida.)"
+            }
         },
         {
             "id": 8,
             "english": "",
             "portuguese": "Como se diz: \"Eu estou apaixonado pelas suas curvas\"?",
-            "options": [
-                "I'm in love with the shape of you",
-                "I am loving the form of yours",
-                "I love your shape and your curves"
-            ],
+            "options": ["I'm in love with the shape of you", "I am loving the form of yours", "I love your shape and your curves"],
             "correctIndex": 0,
             "videoUrl": "Ed Sheeran - Shape of You (Official Music Video)_4e7c8792_cortado_20260717_113958.mp4",
             "songTitle": "Shape of You",
-            "artist": "Ed Sheeran"
+            "artist": "Ed Sheeran",
+            "dictionary": {
+                "literal": "Estou apaixonado pelo seu corpo/forma",
+                "usage": "Usado para expressar atração física por alguém",
+                "explanation": "'Shape' significa 'forma' ou 'corpo'. 'In love with' significa 'apaixonado por'.",
+                "example": "I'm in love with the shape of you. (Estou apaixonado pelo seu corpo.)"
+            }
         },
         {
             "id": 9,
             "english": "I'll be needing stitches",
             "portuguese": "Como se diz: \"Eu vou precisar de pontos\"?",
-            "options": [
-                "I'll be needing stitches",
-                "I need points",
-                "I will have dots"
-            ],
+            "options": ["I'll be needing stitches", "I need points", "I will have dots"],
             "correctIndex": 0,
             "videoUrl": "Shawn Mendes - Stitches (Official Music Video)_50edee92_cortado_20260717_114940.mp4",
             "songTitle": "Stitches",
-            "artist": "Shawn Mendes"
+            "artist": "Shawn Mendes",
+            "dictionary": {
+                "literal": "Vou precisar de pontos (costura)",
+                "usage": "Usado metaforicamente para dizer que está muito machucado emocionalmente",
+                "explanation": "'Stitches' são 'pontos' de costura. É uma metáfora para dor emocional.",
+                "example": "I'm bleeding, I'll be needing stitches. (Estou sangrando, vou precisar de pontos.)"
+            }
         },
         {
             "id": 10,
             "english": "No matter what I do",
             "portuguese": "Como se diz: \"Não importa o que eu faça\"?",
-            "options": [
-                "No matter what I do",
-                "No what I does",
-                "No important what I do"
-            ],
+            "options": ["No matter what I do", "No what I does", "No important what I do"],
             "correctIndex": 0,
             "videoUrl": "Nelly - Dilemma (Official Music Video) ft. Kelly Rowland_39bbb2ea_cortado_20260717_122747.mp4",
             "songTitle": "Dilemma",
-            "artist": "Nelly feat. Kelly Rowland"
+            "artist": "Nelly feat. Kelly Rowland",
+            "dictionary": {
+                "literal": "Não importa o que eu faça",
+                "usage": "Usado para expressar frustração ou impotência",
+                "explanation": "'No matter what' significa 'não importa o que'.",
+                "example": "No matter what I do, I can't stop thinking about you. (Não importa o que eu faça, não consigo parar de pensar em você.)"
+            }
         },
         {
             "id": 13,
             "english": "I gotta feeling",
             "portuguese": "Como se diz: \"Tô com um pressentimento\"?",
-            "options": [
-                "I gotta feeling",
-                "I have a presentiment",
-                "I'm having a hunch"
-            ],
+            "options": ["I gotta feeling", "I have a presentiment", "I'm having a hunch"],
             "correctIndex": 0,
             "videoUrl": "The Black Eyed Peas - I Gotta Feeling (Official Music Video)_c777a670_cortado_20260717_122115.mp4",
             "songTitle": "I Gotta Feeling",
-            "artist": "The Black Eyed Peas"
+            "artist": "The Black Eyed Peas",
+            "dictionary": {
+                "literal": "Eu tenho um pressentimento",
+                "usage": "Usado quando você sente que algo vai acontecer (geralmente algo bom)",
+                "explanation": "'Gotta' é a contração informal de 'got to' (tenho que) ou 'have got a' (tenho um).",
+                "example": "I gotta feeling that tonight's gonna be a good night. (Tô com um pressentimento que essa noite vai ser boa.)"
+            }
         },
         {
             "id": 15,
             "english": "I don't care, I love it",
             "portuguese": "Como se diz: \"Tô nem ai, eu amo isso\"?",
-            "options": [
-                "I don't care, I love it",
-                "I'm not there, I love",
-                "I'm not here, I love this"
-            ],
+            "options": ["I don't care, I love it", "I'm not there, I love", "I'm not here, I love this"],
             "correctIndex": 0,
             "videoUrl": "Icona Pop - I Love It (feat. Charli XCX) [OFFICIAL VIDEO]_aa60c474_cortado_20260717_123141.mp4",
             "songTitle": "I Don't Care",
-            "artist": "Icona Pop feat. Charli XCX"
+            "artist": "Icona Pop feat. Charli XCX",
+            "dictionary": {
+                "literal": "Não me importo, eu amo isso",
+                "usage": "Usado para mostrar indiferença e ao mesmo tempo empolgação",
+                "explanation": "'Don't care' significa 'não me importo'. 'Love it' significa 'amo isso'.",
+                "example": "I don't care what they say, I love it! (Tô nem ai pro que eles dizem, eu amo isso!)"
+            }
         },
         {
             "id": 16,
             "english": "What do you mean?",
             "portuguese": "Como se diz: \"O que você quer dizer?\"?",
-            "options": [
-                "What do you mean?",
-                "What do you wants?",
-                "What does that mean?"
-            ],
+            "options": ["What do you mean?", "What do you wants?", "What does that mean?"],
             "correctIndex": 0,
             "videoUrl": "Justin Bieber - What Do You Mean？ (Lyric Video)_ecd66f1c_cortado_20260717_124032.mp4",
             "songTitle": "What Do You Mean?",
-            "artist": "Justin Bieber"
+            "artist": "Justin Bieber",
+            "dictionary": {
+                "literal": "O que você quer dizer?",
+                "usage": "Usado quando você não entendeu o que a pessoa disse",
+                "explanation": "'Mean' pode ser verbo (significar/querer dizer) ou adjetivo (malvado). Aqui é verbo.",
+                "example": "What do you mean by that? (O que você quer dizer com isso?)"
+            }
         },
         {
             "id": 17,
             "english": "You're my wonderwall",
             "portuguese": "Como se diz: \"Você é meu porto seguro\"?",
-            "options": [
-                "You're my wonderwall",
-                "Your my secure port",
-                "You is my safe harbor"
-            ],
+            "options": ["You're my wonderwall", "Your my secure port", "You is my safe harbor"],
             "correctIndex": 0,
             "videoUrl": "Oasis - Wonderwall (Official Video)_f5accb41_cortado_20260717_124719.mp4",
             "songTitle": "Wonderwall",
-            "artist": "Oasis"
+            "artist": "Oasis",
+            "dictionary": {
+                "literal": "Você é minha parede de maravilhas",
+                "usage": "Usado para dizer que alguém é seu porto seguro, sua inspiração",
+                "explanation": "'Wonderwall' é uma palavra inventada, mas significa 'alguém que te salva/inspira'.",
+                "example": "You're my wonderwall, you save me. (Você é meu porto seguro, você me salva.)"
+            }
         },
         {
             "id": 18,
             "english": "I just want you to know who I am",
             "portuguese": "Como se diz: \"Eu só quero que você saiba quem eu sou\"?",
-            "options": [
-                "I just want you to know who I am",
-                "I want that you know who are you",
-                "I want to know who I am"
-            ],
+            "options": ["I just want you to know who I am", "I want that you know who are you", "I want to know who I am"],
             "correctIndex": 0,
             "videoUrl": "Goo Goo Dolls – Iris [Official Music Video] [4K Remaster]_d5b8a4ed_cortado_20260721_132047.mp4",
             "songTitle": "Iris",
-            "artist": "Goo Goo Dolls"
+            "artist": "Goo Goo Dolls",
+            "dictionary": {
+                "literal": "Eu só quero que você saiba quem eu sou",
+                "usage": "Usado quando você quer ser compreendido/aceito por alguém",
+                "explanation": "'Just' significa 'apenas/só'. A estrutura 'want you to know' = 'quero que você saiba'.",
+                "example": "I just want you to know who I really am. (Eu só quero que você saiba quem eu realmente sou.)"
+            }
         },
         {
             "id": 19,
             "english": "Beat it",
             "portuguese": "Como se diz: \"Vaza!/Cai fora\"?",
-            "options": [
-                "Beat it",
-                "Go out",
-                "Leak"
-            ],
+            "options": ["Beat it", "Go out", "Leak"],
             "correctIndex": 0,
             "videoUrl": "Michael Jackson - Beat It (Official 4K Video)_eb285543_cortado_20260717_125610.mp4",
             "songTitle": "Beat It",
-            "artist": "Michael Jackson"
+            "artist": "Michael Jackson",
+            "dictionary": {
+                "literal": "Vaza/Cai fora",
+                "usage": "Gíria para mandar alguém embora ou sair de um lugar",
+                "explanation": "'Beat it' é uma gíria americana que significa 'sair daqui', 'cai fora'.",
+                "example": "Beat it! I don't want to see you here again. (Vaza! Não quero te ver aqui de novo.)"
+            }
         },
         {
             "id": 24,
             "english": "Where have you been?",
             "portuguese": "Como se diz: \"Onde você tava?\"?",
-            "options": [
-                "Where have you been?",
-                "Where did you go?",
-                "Where are you from?"
-            ],
+            "options": ["Where have you been?", "Where did you go?", "Where are you from?"],
             "correctIndex": 0,
             "videoUrl": "Rihanna - Where Have You Been_ebb6bf6c_cortado_20260717_130407.mp4",
             "songTitle": "Where Have You Been",
-            "artist": "Rihanna"
+            "artist": "Rihanna",
+            "dictionary": {
+                "literal": "Onde você esteve?",
+                "usage": "Usado para perguntar onde a pessoa estava (geralmente por um período)",
+                "explanation": "O Present Perfect ('have been') é usado para perguntar sobre um período de tempo que continua até o presente.",
+                "example": "Where have you been? I've been looking for you! (Onde você tava? Tava te procurando!)"
+            }
         },
         {
             "id": 25,
             "english": "One last time",
             "portuguese": "Como se diz: \"Pela última vez\"?",
-            "options": [
-                "One last time",
-                "A more time",
-                "Last time"
-            ],
+            "options": ["One last time", "A more time", "Last time"],
             "correctIndex": 0,
             "videoUrl": "Ariana Grande - One Last Time (Official Video)_6afa58d6_cortado_20260717_131702.mp4",
             "songTitle": "One Last Time",
-            "artist": "Ariana Grande"
+            "artist": "Ariana Grande",
+            "dictionary": {
+                "literal": "Uma última vez",
+                "usage": "Usado quando você quer fazer algo uma vez final",
+                "explanation": "'Last' significa 'último/última'. 'One last time' é uma expressão comum.",
+                "example": "Let's try one last time. (Vamos tentar pela última vez.)"
+            }
         },
         {
             "id": 26,
             "english": "I'm off the deep end, watch as I dive in.",
             "portuguese": "Como se diz: \"Tô me jogando de cabeça. Olha só.\"?",
-            "options": [
-                "I'm off the deep end, watch as I dive in.",
-                "I'm trowing myself in the deep, look at me.",
-                "I'm jumping with my head in the water, look at me."
-            ],
+            "options": ["I'm off the deep end, watch as I dive in.", "I'm trowing myself in the deep, look at me.", "I'm jumping with my head in the water, look at me."],
             "correctIndex": 0,
             "videoUrl": "Lady Gaga, Bradley Cooper - Shallow (from A Star Is Born) (Official Music Video)_6b6d4d5b_cortado_20260722_150608.mp4",
             "songTitle": "Shallow",
-            "artist": "Lady Gaga & Bradley Cooper"
+            "artist": "Lady Gaga & Bradley Cooper",
+            "dictionary": {
+                "literal": "Estou na parte funda, olhe enquanto eu mergulho",
+                "usage": "Usado quando você está se arriscando em algo, se jogando de cabeça",
+                "explanation": "'Off the deep end' significa 'na parte funda', uma metáfora para se arriscar.",
+                "example": "I'm off the deep end, I'm going all in. (Tô me jogando de cabeça, vou com tudo.)"
+            }
         },
         {
             "id": 29,
             "english": "You can stand under my umbrella",
             "portuguese": "Como se diz: \"Você pode ficar embaixo do meu guarda-chuva\"?",
-            "options": [
-                "You can stand under my umbrella",
-                "You can be my umbrella",
-                "You can run under my umbrella"
-            ],
+            "options": ["You can stand under my umbrella", "You can be my umbrella", "You can run under my umbrella"],
             "correctIndex": 0,
             "videoUrl": "Rihanna - Umbrella (Orange Version) (Official Music Video) ft. JAŸ-Z_f8f21764_cortado_20260722_145927.mp4",
             "songTitle": "Umbrella",
-            "artist": "Rihanna"
+            "artist": "Rihanna",
+            "dictionary": {
+                "literal": "Você pode ficar embaixo do meu guarda-chuva",
+                "usage": "Metáfora para proteger alguém, estar ao lado da pessoa",
+                "explanation": "'Stand under' significa 'ficar embaixo'. 'Umbrella' é guarda-chuva, metáfora de proteção.",
+                "example": "You can stand under my umbrella when it rains. (Você pode ficar embaixo do meu guarda-chuva quando chover.)"
+            }
         },
         {
             "id": 30,
             "english": "Because I'm happy",
             "portuguese": "Como se diz: \"Porque estou feliz\"?",
-            "options": [
-                "Because I'm happy",
-                "Because I'm glad",
-                "Because I'm cheerful"
-            ],
+            "options": ["Because I'm happy", "Because I'm glad", "Because I'm cheerful"],
             "correctIndex": 0,
             "videoUrl": "Pharrell Williams - Happy (Official Video)_8dc8ee78_cortado_20260722_150855.mp4",
             "songTitle": "Happy",
-            "artist": "Pharrell Williams"
+            "artist": "Pharrell Williams",
+            "dictionary": {
+                "literal": "Porque estou feliz",
+                "usage": "Usado para explicar um estado de felicidade",
+                "explanation": "'Because' = porque. 'I'm' = I am (eu estou/eu sou). 'Happy' = feliz.",
+                "example": "I'm smiling because I'm happy. (Estou sorrindo porque estou feliz.)"
+            }
         },
         {
             "id": 27,
             "english": "You want me, I want you, baby",
             "portuguese": "Como se diz: \"Você me quer, eu quero você, baby\"?",
-            "options": [
-                "You want me, I want you, baby",
-                "You need me, I need you, baby",
-                "You love me, I love you, baby"
-            ],
+            "options": ["You want me, I want you, baby", "You need me, I need you, baby", "You love me, I love you, baby"],
             "correctIndex": 0,
             "videoUrl": "Dua Lipa - Levitating Featuring DaBaby (Official Music Video)_362e9027_cortado_20260722_145724.mp4",
             "songTitle": "Levitating",
-            "artist": "Dua Lipa"
+            "artist": "Dua Lipa",
+            "dictionary": {
+                "literal": "Você me quer, eu quero você, baby",
+                "usage": "Usado para expressar desejo/atração mútua",
+                "explanation": "'Want' = querer. A estrutura é simples: sujeito + verbo + objeto.",
+                "example": "You want me and I want you too. (Você me quer e eu quero você também.)"
+            }
         },
         {
             "id": 31,
             "english": "I'm blinded by the lights",
             "portuguese": "Como se diz: \"Essas luzes tão me cegando\"?",
-            "options": [
-                "I'm blinded by the lights",
-                "That lights are blind",
-                "I'm blinded because of the light"
-            ],
+            "options": ["I'm blinded by the lights", "That lights are blind", "I'm blinded because of the light"],
             "correctIndex": 0,
             "videoUrl": "The Weeknd - Blinding Lights (Official Video)_bc300693_cortado_20260722_151830.mp4",
             "songTitle": "Blinding Lights",
-            "artist": "The Weeknd"
+            "artist": "The Weeknd",
+            "dictionary": {
+                "literal": "Estou cegado pelas luzes",
+                "usage": "Metáfora para estar ofuscado ou impressionado por algo",
+                "explanation": "'Blinded' = cegado. 'By the lights' = pelas luzes. Metáfora para estar ofuscado.",
+                "example": "I'm blinded by the lights of the city. (Estou cegado pelas luzes da cidade.)"
+            }
         },
         {
             "id": 36,
             "english": "I'm the bad guy, duh",
             "portuguese": "Como se diz: \"Eu sou o vilão, ué\"?",
-            "options": [
-                "I'm the bad guy, duh",
-                "I'm a bad man, duh",
-                "I'm the evil, duh"
-            ],
+            "options": ["I'm the bad guy, duh", "I'm a bad man, duh", "I'm the evil, duh"],
             "correctIndex": 0,
             "videoUrl": "Billie Eilish - bad guy_fd49e8ea_cortado_20260722_152855.mp4",
             "songTitle": "Bad Guy",
-            "artist": "Billie Eilish"
+            "artist": "Billie Eilish",
+            "dictionary": {
+                "literal": "Eu sou o vilão, ué",
+                "usage": "Usado de forma irônica para dizer que é o 'mau' da história",
+                "explanation": "'Bad guy' = vilão. 'Duh' é uma interjeição que significa 'óbvio' / 'ué'.",
+                "example": "I'm the bad guy in this movie, duh. (Eu sou o vilão nesse filme, ué.)"
+            }
         },
         {
             "id": 38,
             "english": "Mama! Ooh!\nDidn't mean to make you cry",
             "portuguese": "Como se diz: \"Mãe! Ooh!\nNão quis fazer você chorar\"?",
-            "options": [
-                "Mama! Ooh!\nDidn't mean to make you cry",
-                "Mama! Ooh!\nI didn't want to you to cry",
-                "Mama! Ooh!\nI not want to make you sad"
-            ],
+            "options": ["Mama! Ooh!\nDidn't mean to make you cry", "Mama! Ooh!\nI didn't want to you to cry", "Mama! Ooh!\nI not want to make you sad"],
             "correctIndex": 0,
             "videoUrl": "Queen – Bohemian Rhapsody (Official Video Remastered)_74b26035_cortado_20260722_153730.mp4",
             "songTitle": "Bohemian Rhapsody",
-            "artist": "Queen"
+            "artist": "Queen",
+            "dictionary": {
+                "literal": "Mãe! Ooh! Não quis fazer você chorar",
+                "usage": "Usado para se desculpar por ter magoado alguém",
+                "explanation": "'Didn't mean to' = 'não foi minha intenção'. 'Make you cry' = 'fazer você chorar'.",
+                "example": "I didn't mean to make you cry, I'm sorry. (Não foi minha intenção fazer você chorar, desculpa.)"
+            }
         },
         {
             "id": 42,
             "english": "Hello, it's me",
             "portuguese": "Como se diz: \"Alô, sou eu.\"?",
-            "options": [
-                "Hello, it's me",
-                "Hello is I",
-                "Hi I'm"
-            ],
+            "options": ["Hello, it's me", "Hello is I", "Hi I'm"],
             "correctIndex": 0,
             "videoUrl": "Adele - Hello (Official Music Video)_47ebf83f_cortado_20260722_154959.mp4",
             "songTitle": "Hello",
-            "artist": "Adele"
+            "artist": "Adele",
+            "dictionary": {
+                "literal": "Olá, sou eu",
+                "usage": "Usado para se identificar ao telefone ou em uma conversa",
+                "explanation": "'It's me' é uma forma comum de se identificar. Não se diz 'I am' nesse contexto.",
+                "example": "Hello, it's me. I'm calling to say sorry. (Alô, sou eu. Tô ligando pra pedir desculpa.)"
+            }
         },
         {
             "id": 49,
             "english": "I will always love you",
             "portuguese": "Como se diz: \"Eu sempre vou te amar\"?",
-            "options": [
-                "I will always love you",
-                "I forever love you",
-                "I ever love you"
-            ],
+            "options": ["I will always love you", "I forever love you", "I ever love you"],
             "correctIndex": 0,
             "videoUrl": "Whitney Houston - I Will Always Love You (Official 4K Video)_46fb0e2b_cortado_20260722_155426.mp4",
             "songTitle": "I Will Always Love You",
-            "artist": "Whitney Houston"
+            "artist": "Whitney Houston",
+            "dictionary": {
+                "literal": "Eu sempre vou te amar",
+                "usage": "Usado para declarar amor eterno por alguém",
+                "explanation": "'Will' = futuro. 'Always' = sempre. 'Love you' = te amar.",
+                "example": "I will always love you, no matter what. (Eu sempre vou te amar, não importa o que aconteça.)"
+            }
         },
         {
             "id": 62,
             "english": "But I crumble completely when you cry",
             "portuguese": "Como se diz: \"Mas eu desmorono completamente quando você chora\"?",
-            "options": [
-                "But I crumble completely when you cry",
-                "But I fall complete when you cry",
-                "But I break when you cry"
-            ],
+            "options": ["But I crumble completely when you cry", "But I fall complete when you cry", "But I break when you cry"],
             "correctIndex": 0,
             "videoUrl": "Arctic Monkeys - 505 (Music Video)_a9275aa3_cortado_20260723_131446.mp4",
             "songTitle": "505",
-            "artist": "Arctic Monkeys"
+            "artist": "Arctic Monkeys",
+            "dictionary": {
+                "literal": "Mas eu desmorono completamente quando você chora",
+                "usage": "Usado para dizer que você fica muito abalado quando vê alguém chorar",
+                "explanation": "'Crumble' = desmoronar/despedaçar. 'Completely' = completamente.",
+                "example": "I crumble completely when I see you sad. (Eu desmorono completamente quando te vejo triste.)"
+            }
         },
         {
             "id": 67,
             "english": "Now you're just somebody that I used to know",
             "portuguese": "Como se diz: \"Agora você é só alguém que eu costumava conhecer\"?",
-            "options": [
-                "Now you're just somebody that I used to know",
-                "Now you're one that I know",
-                "Now you're one that I knew before"
-            ],
+            "options": ["Now you're just somebody that I used to know", "Now you're one that I know", "Now you're one that I knew before"],
             "correctIndex": 0,
             "videoUrl": "Gotye - Somebody That I Used To Know (feat. Kimbra) [Official Music Video]_deb5f0d4_cortado_20260723_132141.mp4",
             "songTitle": "Somebody That I Used to Know",
-            "artist": "Gotye"
+            "artist": "Gotye",
+            "dictionary": {
+                "literal": "Agora você é só alguém que eu costumava conhecer",
+                "usage": "Usado para falar sobre alguém que foi importante no passado, mas não é mais",
+                "explanation": "'Used to' = costumava (algo que acontecia no passado, mas não acontece mais).",
+                "example": "We used to be friends, now you're just somebody I used to know. (A gente era amigo, agora você é só alguém que eu conhecia.)"
+            }
         },
         {
             "id": 72,
             "english": "I wanna be yours",
             "portuguese": "Como se diz: \"Eu quero ser seu\"?",
-            "options": [
-                "I wanna be yours",
-                "I want to be you",
-                "I wanna to be yous"
-            ],
+            "options": ["I wanna be yours", "I want to be you", "I wanna to be yous"],
             "correctIndex": 0,
             "videoUrl": "I Wanna Be Yours_949c8bf8_cortado_20260723_132920.mp4",
             "songTitle": "I Wanna Be Yours",
-            "artist": "Arctic Monkeys"
+            "artist": "Arctic Monkeys",
+            "dictionary": {
+                "literal": "Eu quero ser seu/sua",
+                "usage": "Usado para expressar desejo de pertencimento ou amor por alguém",
+                "explanation": "'Wanna' é a contração informal de 'want to'. 'Yours' é pronome possessivo (substitui 'your + substantivo').",
+                "example": "I wanna be yours forever. (Eu quero ser seu para sempre.)"
+            }
         },
         {
             "id": 73,
             "english": "Today I don't feel like doing anything",
             "portuguese": "Como se diz: \"Tô sem saco pra fazer nada hoje\"?",
-            "options": [
-                "Today I don't feel like doing anything",
-                "I don't want to do anything today",
-                "I don't have bag to do anything today"
-            ],
+            "options": ["Today I don't feel like doing anything", "I don't want to do anything today", "I don't have bag to do anything today"],
             "correctIndex": 0,
             "videoUrl": "Bruno Mars - The Lazy Song (Official Music Video)_249065d7_cortado_20260723_133500.mp4",
             "songTitle": "The Lazy Song",
-            "artist": "Bruno Mars"
+            "artist": "Bruno Mars",
+            "dictionary": {
+                "literal": "Hoje não tô afim de fazer nada",
+                "usage": "Usado quando você quer ficar de boa, sem fazer nenhuma atividade",
+                "explanation": "'Feel like' = estar afim de / ter vontade de. 'Anything' = nada (em frases negativas).",
+                "example": "I don't feel like doing anything today, just relaxing. (Não tô afim de fazer nada hoje, só relaxar.)"
+            }
         },
         {
             "id": 82,
             "english": "I never meant to let you down",
             "portuguese": "Como se diz: \"Nunca foi minha intenção te decepcionar\"?",
-            "options": [
-                "I never meant to let you down",
-                "I always wanted to let you go",
-                "Never is my intencion to make sad"
-            ],
+            "options": ["I never meant to let you down", "I always wanted to let you go", "Never is my intencion to make sad"],
             "correctIndex": 0,
             "videoUrl": "Post Malone - Better Now_7046793e_cortado_20260723_135033.mp4",
             "songTitle": "Better Now",
-            "artist": "Post Malone"
+            "artist": "Post Malone",
+            "dictionary": {
+                "literal": "Nunca foi minha intenção te decepcionar",
+                "usage": "Usado para se desculpar quando você magoa ou decepciona alguém",
+                "explanation": "'Mean to' = ter a intenção de. 'Let down' = decepcionar.",
+                "example": "I'm sorry I never meant to let you down. (Desculpa, nunca foi minha intenção te decepcionar.)"
+            }
         }
     ]
 }
