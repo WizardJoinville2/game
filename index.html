@@ -32,10 +32,24 @@
             <div class="progress-bar-fill" id="progressFill"></div>
         </div>
 
-        <div id="mainContent">
-            <div class="loading">
-                <div class="spinner"></div>
-                <p>Carregando vídeos e perguntas...</p>
+        <!-- CONTEÚDO PRINCIPAL COM SIDEBAR -->
+        <div id="mainContent" class="main-content">
+            <!-- Lado esquerdo: pergunta, opções, feedback, vídeo -->
+            <div class="content-left" id="contentLeft">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Carregando vídeos e perguntas...</p>
+                </div>
+            </div>
+
+            <!-- Lado direito: Dicionário (aparece após responder) -->
+            <div class="content-right" id="contentRight">
+                <div class="dictionary-sidebar" id="dictionarySidebar">
+                    <div class="dictionary-placeholder">
+                        <span class="placeholder-icon">📖</span>
+                        <p>O dicionário aparecerá aqui<br>após você responder!</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -53,7 +67,8 @@
         let totalAnswered = 0;
         let streakCount = 0;
 
-        const mainContent = document.getElementById('mainContent');
+        const contentLeft = document.getElementById('contentLeft');
+        const contentRight = document.getElementById('contentRight');
         const progressBadge = document.getElementById('progressBadge');
         const progressFill = document.getElementById('progressFill');
         const streakBadge = document.getElementById('streakBadge');
@@ -61,7 +76,6 @@
 
         // ============================================================
         //  FUNÇÃO PARA LIMPAR A FRASE
-        //  Remove: "Como se diz: ", aspas, "?" e espaços extras
         // ============================================================
         function cleanPhrase(text) {
             let cleaned = text.replace(/^Como se diz:\s*"?|^Como se diz\s*"?/, '');
@@ -85,6 +99,60 @@
         }
 
         // ============================================================
+        //  FUNÇÃO PARA EMBARALHAR AS OPÇÕES
+        // ============================================================
+        function shuffleOptions(arr) {
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        // ============================================================
+        //  FUNÇÃO PARA RENDERIZAR O DICIONÁRIO (SIDEBAR)
+        // ============================================================
+        function renderDictionarySidebar(lesson) {
+            if (!lesson.dictionary) {
+                return `
+                    <div class="dictionary-placeholder">
+                        <span class="placeholder-icon">📖</span>
+                        <p>Esta música não tem<br>dicionário disponível</p>
+                    </div>
+                `;
+            }
+
+            const dict = lesson.dictionary;
+            return `
+                <div class="dictionary-header">
+                    <span class="dict-icon">📖</span>
+                    <span class="dict-title">Dicionário da Frase</span>
+                </div>
+                <div class="dictionary-content">
+                    <div class="dict-row">
+                        <span class="dict-label">📝 Tradução literal:</span>
+                        <span class="dict-value">${dict.literal || lesson.english || '—'}</span>
+                    </div>
+                    ${dict.usage ? `
+                    <div class="dict-row">
+                        <span class="dict-label">💡 Como usar no dia a dia:</span>
+                        <span class="dict-value">${dict.usage}</span>
+                    </div>` : ''}
+                    ${dict.explanation ? `
+                    <div class="dict-row">
+                        <span class="dict-label">📚 Explicação gramatical:</span>
+                        <span class="dict-value">${dict.explanation}</span>
+                    </div>` : ''}
+                    ${dict.example ? `
+                    <div class="dict-row">
+                        <span class="dict-label">✏️ Exemplo em frase:</span>
+                        <span class="dict-value dict-example">"${dict.example}"</span>
+                    </div>` : ''}
+                </div>
+            `;
+        }
+
+        // ============================================================
         //  FUNÇÃO PARA CARREGAR OS DADOS
         // ============================================================
         async function carregarDados() {
@@ -99,7 +167,7 @@
                 iniciarNovoJogo();
             } catch (error) {
                 console.error('Erro ao carregar dados:', error);
-                mainContent.innerHTML = `
+                contentLeft.innerHTML = `
                             <div style="text-align: center; padding: 40px; color: #ff6b9d;">
                                 <div style="font-size: 3rem; margin-bottom: 15px;">⚠️</div>
                                 <h3 style="color: #f5eeff; margin-bottom: 10px;">Erro ao carregar os dados!</h3>
@@ -121,22 +189,23 @@
             streakCount = 0;
             answered = false;
             updateHeaderStats();
+
+            // LIMPA O DICIONÁRIO AO INICIAR O JOGO
+            const dictionarySidebar = document.getElementById('dictionarySidebar');
+            if (dictionarySidebar) {
+                dictionarySidebar.innerHTML = `
+                            <div class="dictionary-placeholder">
+                                <span class="placeholder-icon">📖</span>
+                                <p>O dicionário aparecerá aqui<br>após você responder!</p>
+                            </div>
+                        `;
+            }
+
             renderQuestion();
         }
 
         // ============================================================
-        //  FUNÇÃO PARA EMBARALHAR AS OPÇÕES
-        // ============================================================
-        function shuffleOptions(arr) {
-            for (let i = arr.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [arr[i], arr[j]] = [arr[j], arr[i]];
-            }
-            return arr;
-        }
-
-        // ============================================================
-        //  FUNÇÃO PARA CRIAR PLAYER DE VÍDEO COM BOTÃO DENTRO
+        //  FUNÇÃO PARA CRIAR PLAYER DE VÍDEO
         // ============================================================
         function createVideoPlayer(videoUrl, thumbnail = null) {
             const wrapper = document.createElement('div');
@@ -180,11 +249,6 @@
             nextBtn.innerHTML = 'Próximo →';
             wrapper.appendChild(nextBtn);
 
-            const hint = document.createElement('div');
-            hint.className = 'video-controls-hint';
-            hint.textContent = '🎬 Use os controles para pausar, ajustar volume ou assistir em tela cheia';
-            wrapper.appendChild(hint);
-
             return wrapper;
         }
 
@@ -208,42 +272,59 @@
 
             const letters = ['A', 'B', 'C'];
             let optionsHtml = shuffledOptions.map((opt, idx) => `
-                        <button class="option-btn" data-index="${idx}" data-correct="${idx === correctIndexShuffled}">
-                            <span class="letter">${letters[idx]}</span>
-                            <span class="option-text">${opt}</span>
-                        </button>
-                    `).join('');
+                            <button class="option-btn" data-index="${idx}" data-correct="${idx === correctIndexShuffled}">
+                                <span class="letter">${letters[idx]}</span>
+                                <span class="option-text">${opt}</span>
+                            </button>
+                        `).join('');
 
             const html = `
-                        <div class="question-card">
-                            <div class="question-label">
-                                <span class="label-dot"></span>
-                                COMO SE DIZ EM INGLÊS:
+                            <div class="question-card">
+                                <div class="question-label">
+                                    <span class="label-dot"></span>
+                                    COMO SE DIZ EM INGLÊS:
+                                </div>
+                                <div class="question-text">
+                                    <span class="phrase-icon">“</span>
+                                    ${cleanPhraseText}
+                                    <span class="phrase-icon">”</span>
+                                </div>
                             </div>
-                            <div class="question-text">
-                                <span class="phrase-icon">“</span>
-                                ${cleanPhraseText}
-                                <span class="phrase-icon">”</span>
+
+                            <div class="options" id="optionsContainer">
+                                ${optionsHtml}
                             </div>
-                        </div>
 
-                        <div class="options" id="optionsContainer">
-                            ${optionsHtml}
-                        </div>
-
-                        <div class="feedback-area" id="feedbackArea">
-                            <div class="feedback-text" id="feedbackText">
-                                💡 Clique na opção correta para assistir ao clipe da música!
+                            <div class="feedback-area" id="feedbackArea">
+                                <div id="feedbackResult" style="display: none;"></div>
+                                <div id="videoContainer" style="display: none;"></div>
+                                <div class="feedback-text" id="feedbackText">
+                                    💡 Clique na opção correta para assistir ao clipe da música!
+                                </div>
                             </div>
-                        </div>
-                    `;
+                        `;
 
-            mainContent.innerHTML = html;
+            contentLeft.innerHTML = html;
             updateProgress();
             updateHeaderStats();
 
+            // ============================================================
+            // LIMPA O DICIONÁRIO AO CARREGAR UMA NOVA PERGUNTA
+            // ============================================================
+            const dictionarySidebar = document.getElementById('dictionarySidebar');
+            if (dictionarySidebar) {
+                dictionarySidebar.innerHTML = `
+                            <div class="dictionary-placeholder">
+                                <span class="placeholder-icon">📖</span>
+                                <p>O dicionário aparecerá aqui<br>após você responder!</p>
+                            </div>
+                        `;
+            }
+
             const optionBtns = document.querySelectorAll('.option-btn');
             const feedbackText = document.getElementById('feedbackText');
+            const feedbackResult = document.getElementById('feedbackResult');
+            const videoContainer = document.getElementById('videoContainer');
             const feedbackArea = document.getElementById('feedbackArea');
 
             let nextBtn = null;
@@ -285,8 +366,17 @@
                     const songTitle = lesson.songTitle || 'Música';
                     const correctPhrase = lesson.options[lesson.correctIndex];
 
+                    // ============================================================
+                    // 1. ESCONDE O TEXTO INICIAL
+                    // ============================================================
+                    feedbackText.style.display = 'none';
+
+                    // ============================================================
+                    // 2. MOSTRA O RESULTADO (Acertou/Errou)
+                    // ============================================================
+                    feedbackResult.style.display = 'block';
                     if (isCorrect) {
-                        feedbackText.innerHTML = `
+                        feedbackResult.innerHTML = `
                                     <div class="feedback-result correct">
                                         <span class="icon">✅</span>
                                         <span>Acertou!</span>
@@ -295,7 +385,7 @@
                                     <div class="feedback-highlight">🔥 Série atual: ${streakCount}</div>
                                 `;
                     } else {
-                        feedbackText.innerHTML = `
+                        feedbackResult.innerHTML = `
                                     <div class="feedback-result wrong">
                                         <span class="icon">❌</span>
                                         <span>Errou!</span>
@@ -305,11 +395,21 @@
                                 `;
                     }
 
-                    const oldVideo = feedbackArea.querySelector('.video-player-wrapper');
-                    if (oldVideo) oldVideo.remove();
+                    // ============================================================
+                    // 3. MOSTRA O DICIONÁRIO NA SIDEBAR (AO LADO)
+                    // ============================================================
+                    const sidebar = document.getElementById('dictionarySidebar');
+                    if (sidebar) {
+                        sidebar.innerHTML = renderDictionarySidebar(lesson);
+                    }
 
+                    // ============================================================
+                    // 4. MOSTRA O VÍDEO
+                    // ============================================================
+                    videoContainer.style.display = 'block';
                     const videoPlayer = createVideoPlayer(lesson.videoUrl, lesson.thumbnail);
-                    feedbackArea.appendChild(videoPlayer);
+                    videoContainer.innerHTML = '';
+                    videoContainer.appendChild(videoPlayer);
 
                     feedbackArea.classList.add('has-feedback');
 
@@ -327,6 +427,19 @@
 
                         remainingLessons.shift();
                         totalAnswered++;
+
+                        // ============================================================
+                        // LIMPA O DICIONÁRIO ANTES DE CARREGAR A PRÓXIMA PERGUNTA
+                        // ============================================================
+                        const sidebarClean = document.getElementById('dictionarySidebar');
+                        if (sidebarClean) {
+                            sidebarClean.innerHTML = `
+                                <div class="dictionary-placeholder">
+                                    <span class="placeholder-icon">⏳</span>
+                                    <p>Carregando próxima música...</p>
+                                </div>
+                            `;
+                        }
 
                         renderQuestion();
                     });
@@ -349,24 +462,32 @@
                 message = 'Valeu pelo esforço! Tente novamente!'; }
 
             const html = `
-                        <div class="final-screen">
-                            <div class="trophy">${emoji}</div>
-                            <h2>Você completou todas!</h2>
-                            <p>${message}</p>
-                            <div class="score-display">
-                                <span class="score-number">${correctCount}</span> / ${totalLessons} acertos
+                            <div class="final-screen">
+                                <div class="trophy">${emoji}</div>
+                                <h2>Você completou todas!</h2>
+                                <p>${message}</p>
+                                <div class="score-display">
+                                    <span class="score-number">${correctCount}</span> / ${totalLessons} acertos
+                                </div>
+                                <div class="score-bar">
+                                    <div class="score-bar-fill" style="width: ${percentage}%;"></div>
+                                </div>
+                                <button class="restart-btn" id="restartBtn">🔄 Recomeçar (nova ordem aleatória)</button>
                             </div>
-                            <div class="score-bar">
-                                <div class="score-bar-fill" style="width: ${percentage}%;"></div>
-                            </div>
-                            <button class="restart-btn" id="restartBtn">🔄 Recomeçar (nova ordem aleatória)</button>
-                        </div>
-                    `;
+                        `;
 
-            mainContent.innerHTML = html;
+            contentLeft.innerHTML = html;
             progressBadge.textContent = `🎉 Fim!`;
             progressFill.style.width = '100%';
             updateHeaderStats();
+
+            // Limpa a sidebar
+            document.getElementById('dictionarySidebar').innerHTML = `
+                            <div class="dictionary-placeholder">
+                                <span class="placeholder-icon">🎉</span>
+                                <p>Jogo finalizado!</p>
+                            </div>
+                        `;
 
             document.getElementById('restartBtn').addEventListener('click', () => {
                 iniciarNovoJogo();
