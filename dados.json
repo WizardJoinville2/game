@@ -317,6 +317,76 @@
             "videoUrl": "Whitney Houston - I Will Always Love You (Official 4K Video)_46fb0e2b_cortado_20260722_155426.mp4",
             "songTitle": "I Will Always Love You",
             "artist": "Whitney Houston"
+        },
+        {
+            "id": 62,
+            "english": "But I crumble completely when you cry",
+            "portuguese": "Como se diz: \"Mas eu desmorono completamente quando você chora\"?",
+            "options": [
+                "But I crumble completely when you cry",
+                "But I fall complete when you cry",
+                "But I break when you cry"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "Arctic Monkeys - 505 (Music Video)_a9275aa3_cortado_20260723_131446.mp4",
+            "songTitle": "505",
+            "artist": "Arctic Monkeys"
+        },
+        {
+            "id": 67,
+            "english": "Now you're just somebody that I used to know",
+            "portuguese": "Como se diz: \"Agora você é só alguém que eu costumava conhecer\"?",
+            "options": [
+                "Now you're just somebody that I used to know",
+                "Now you're one that I know",
+                "Now you're one that I knew before"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "Gotye - Somebody That I Used To Know (feat. Kimbra) [Official Music Video]_deb5f0d4_cortado_20260723_132141.mp4",
+            "songTitle": "Somebody That I Used to Know",
+            "artist": "Gotye"
+        },
+        {
+            "id": 72,
+            "english": "I wanna be yours",
+            "portuguese": "Como se diz: \"Eu quero ser seu\"?",
+            "options": [
+                "I wanna be yours",
+                "I want to be you",
+                "I wanna to be yous"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "I Wanna Be Yours_949c8bf8_cortado_20260723_132920.mp4",
+            "songTitle": "I Wanna Be Yours",
+            "artist": "Arctic Monkeys"
+        },
+        {
+            "id": 73,
+            "english": "Today I don't feel like doing anything",
+            "portuguese": "Como se diz: \"Tô sem saco pra fazer nada hoje\"?",
+            "options": [
+                "Today I don't feel like doing anything",
+                "I don't want to do anything today",
+                "I don't have bag to do anything today"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "Bruno Mars - The Lazy Song (Official Music Video)_249065d7_cortado_20260723_133500.mp4",
+            "songTitle": "The Lazy Song",
+            "artist": "Bruno Mars"
+        },
+        {
+            "id": 82,
+            "english": "I never meant to let you down",
+            "portuguese": "Como se diz: \"Nunca foi minha intenção te decepcionar\"?",
+            "options": [
+                "I never meant to let you down",
+                "I always wanted to let you go",
+                "Never is my intencion to make sad"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "Post Malone - Better Now_7046793e_cortado_20260723_135033.mp4",
+            "songTitle": "Better Now",
+            "artist": "Post Malone"
         }
     ]
 }
