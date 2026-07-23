@@ -17,7 +17,7 @@
         {
             "id": 3,
             "portuguese": "Como se diz: \"Você é incrível do jeito que você é\"?",
-            "options": ["You are incredible the mean You Are", "You is amazing the Way You is", "Your amazing Just the Way Your"],
+            "options": ["You're amazing just the way you are", "You is amazing the way You is","You are incredible the way you are"],
             "correctIndex": 0,
             "videoUrl": "Bruno Mars - Just The Way You Are (Official Music Video)_a6c528a1_cortado_20260717_110625.mp4",
             "songTitle": "Just the Way You Are - Bruno Mars",
