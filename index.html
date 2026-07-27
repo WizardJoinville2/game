@@ -266,6 +266,13 @@
             const shuffledOptions = shuffleOptions([...lesson.options]);
             const correctAnswer = lesson.options[lesson.correctIndex];
             const correctIndexShuffled = shuffledOptions.indexOf(correctAnswer);
+            if (correctIndexShuffled === -1) {
+                console.warn('Resposta correta não encontrada nas opções embaralhadas', {
+                    lessonId: lesson.id,
+                    correctAnswer,
+                    shuffledOptions
+                });
+            }
 
             const cleanPhraseText = cleanPhrase(lesson.portuguese);
 
@@ -333,8 +340,11 @@
             optionBtns.forEach(btn => {
                 btn.addEventListener('click', function(e) {
                     if (answered) return;
-                    const isCorrect = this.dataset.correct === 'true';
                     const chosenBtn = this;
+                    // Calcular acerto comparando o texto exibido (mais robusto que confiar apenas em data-attributes)
+                    const chosenTextEl = chosenBtn.querySelector('.option-text');
+                    const chosenText = chosenTextEl ? chosenTextEl.textContent.trim() : (chosenBtn.dataset.index || '').toString();
+                    const isCorrect = chosenText === String(correctAnswer).trim();
 
                     optionBtns.forEach(b => {
                         b.disabled = true;
