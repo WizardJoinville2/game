@@ -3,7 +3,11 @@
         {
             "id": 1,
             "portuguese": "Como se diz: \"Eu fiz de novo\"?",
-            "options": ["I did it again", "I do it again", "I made it again"],
+            "options": [
+                "I did it again",
+                "I do it again",
+                "I made it again"
+            ],
             "correctIndex": 0,
             "videoUrl": "Britney Spears - Oops!...I Did It Again (Official HD Video)_0506b9a5_cortado_20260717_104344.mp4",
             "songTitle": "Oops!... I Did It Again - Britney Spears",
@@ -17,7 +21,11 @@
         {
             "id": 3,
             "portuguese": "Como se diz: \"Você é incrível do jeito que você é\"?",
-            "options": ["You're amazing just the way you are", "You is amazing the way You is","You are incredible the way you are"],
+            "options": [
+                "You're amazing just the way you are",
+                "You is amazing the way You is",
+                "You are incredible the way you are"
+            ],
             "correctIndex": 0,
             "videoUrl": "Bruno Mars - Just The Way You Are (Official Music Video)_a6c528a1_cortado_20260717_110625.mp4",
             "songTitle": "Just the Way You Are - Bruno Mars",
@@ -32,7 +40,11 @@
             "id": 7,
             "english": "I miss you more than life",
             "portuguese": "Como se diz: \"Eu sinto mais sua falta do que da própria vida\"?",
-            "options": ["I miss you more than life", "I feel your miss more than my own life", "I feel more your miss than life"],
+            "options": [
+                "I miss you more than life",
+                "I feel your miss more than my own life",
+                "I feel more your miss than life"
+            ],
             "correctIndex": 0,
             "videoUrl": "Justin Bieber - Ghost_0f7d1dc2_cortado_20260717_113152.mp4",
             "songTitle": "Ghost",
@@ -48,7 +60,11 @@
             "id": 8,
             "english": "",
             "portuguese": "Como se diz: \"Eu estou apaixonado pelas suas curvas\"?",
-            "options": ["I'm in love with the shape of you", "I am loving the form of yours", "I love your shape and your curves"],
+            "options": [
+                "I'm in love with the shape of you",
+                "I am loving the form of yours",
+                "I love your shape and your curves"
+            ],
             "correctIndex": 0,
             "videoUrl": "Ed Sheeran - Shape of You (Official Music Video)_4e7c8792_cortado_20260717_113958.mp4",
             "songTitle": "Shape of You",
@@ -64,7 +80,11 @@
             "id": 9,
             "english": "I'll be needing stitches",
             "portuguese": "Como se diz: \"Eu vou precisar de pontos\"?",
-            "options": ["I'll be needing stitches", "I need points", "I will have dots"],
+            "options": [
+                "I'll be needing stitches",
+                "I need points",
+                "I will have dots"
+            ],
             "correctIndex": 0,
             "videoUrl": "Shawn Mendes - Stitches (Official Music Video)_50edee92_cortado_20260717_114940.mp4",
             "songTitle": "Stitches",
@@ -80,7 +100,11 @@
             "id": 10,
             "english": "No matter what I do",
             "portuguese": "Como se diz: \"Não importa o que eu faça\"?",
-            "options": ["No matter what I do", "No what I does", "No important what I do"],
+            "options": [
+                "No matter what I do",
+                "No what I does",
+                "No important what I do"
+            ],
             "correctIndex": 0,
             "videoUrl": "Nelly - Dilemma (Official Music Video) ft. Kelly Rowland_39bbb2ea_cortado_20260717_122747.mp4",
             "songTitle": "Dilemma",
@@ -96,7 +120,11 @@
             "id": 13,
             "english": "I gotta feeling",
             "portuguese": "Como se diz: \"Tô com um pressentimento\"?",
-            "options": ["I gotta feeling", "I have a presentiment", "I'm having a hunch"],
+            "options": [
+                "I gotta feeling",
+                "I have a presentiment",
+                "I'm having a hunch"
+            ],
             "correctIndex": 0,
             "videoUrl": "The Black Eyed Peas - I Gotta Feeling (Official Music Video)_c777a670_cortado_20260717_122115.mp4",
             "songTitle": "I Gotta Feeling",
@@ -112,7 +140,11 @@
             "id": 15,
             "english": "I don't care, I love it",
             "portuguese": "Como se diz: \"Tô nem ai, eu amo isso\"?",
-            "options": ["I don't care, I love it", "I'm not there, I love", "I'm not here, I love this"],
+            "options": [
+                "I don't care, I love it",
+                "I'm not there, I love",
+                "I'm not here, I love this"
+            ],
             "correctIndex": 0,
             "videoUrl": "Icona Pop - I Love It (feat. Charli XCX) [OFFICIAL VIDEO]_aa60c474_cortado_20260717_123141.mp4",
             "songTitle": "I Don't Care",
@@ -128,7 +160,11 @@
             "id": 16,
             "english": "What do you mean?",
             "portuguese": "Como se diz: \"O que você quer dizer?\"?",
-            "options": ["What do you mean?", "What do you wants?", "What does that mean?"],
+            "options": [
+                "What do you mean?",
+                "What do you wants?",
+                "What does that mean?"
+            ],
             "correctIndex": 0,
             "videoUrl": "Justin Bieber - What Do You Mean？ (Lyric Video)_ecd66f1c_cortado_20260717_124032.mp4",
             "songTitle": "What Do You Mean?",
@@ -144,7 +180,11 @@
             "id": 17,
             "english": "You're my wonderwall",
             "portuguese": "Como se diz: \"Você é meu porto seguro\"?",
-            "options": ["You're my wonderwall", "Your my secure port", "You is my safe harbor"],
+            "options": [
+                "You're my wonderwall",
+                "Your my secure port",
+                "You is my safe harbor"
+            ],
             "correctIndex": 0,
             "videoUrl": "Oasis - Wonderwall (Official Video)_f5accb41_cortado_20260717_124719.mp4",
             "songTitle": "Wonderwall",
@@ -160,7 +200,11 @@
             "id": 18,
             "english": "I just want you to know who I am",
             "portuguese": "Como se diz: \"Eu só quero que você saiba quem eu sou\"?",
-            "options": ["I just want you to know who I am", "I want that you know who are you", "I want to know who I am"],
+            "options": [
+                "I just want you to know who I am",
+                "I want that you know who are you",
+                "I want to know who I am"
+            ],
             "correctIndex": 0,
             "videoUrl": "Goo Goo Dolls – Iris [Official Music Video] [4K Remaster]_d5b8a4ed_cortado_20260721_132047.mp4",
             "songTitle": "Iris",
@@ -176,7 +220,11 @@
             "id": 19,
             "english": "Beat it",
             "portuguese": "Como se diz: \"Vaza!/Cai fora\"?",
-            "options": ["Beat it", "Go out", "Leak"],
+            "options": [
+                "Beat it",
+                "Go out",
+                "Leak"
+            ],
             "correctIndex": 0,
             "videoUrl": "Michael Jackson - Beat It (Official 4K Video)_eb285543_cortado_20260717_125610.mp4",
             "songTitle": "Beat It",
@@ -192,7 +240,11 @@
             "id": 24,
             "english": "Where have you been?",
             "portuguese": "Como se diz: \"Onde você tava?\"?",
-            "options": ["Where have you been?", "Where did you go?", "Where are you from?"],
+            "options": [
+                "Where have you been?",
+                "Where did you go?",
+                "Where are you from?"
+            ],
             "correctIndex": 0,
             "videoUrl": "Rihanna - Where Have You Been_ebb6bf6c_cortado_20260717_130407.mp4",
             "songTitle": "Where Have You Been",
@@ -208,7 +260,11 @@
             "id": 25,
             "english": "One last time",
             "portuguese": "Como se diz: \"Pela última vez\"?",
-            "options": ["One last time", "A more time", "Last time"],
+            "options": [
+                "One last time",
+                "A more time",
+                "Last time"
+            ],
             "correctIndex": 0,
             "videoUrl": "Ariana Grande - One Last Time (Official Video)_6afa58d6_cortado_20260717_131702.mp4",
             "songTitle": "One Last Time",
@@ -224,7 +280,11 @@
             "id": 26,
             "english": "I'm off the deep end, watch as I dive in.",
             "portuguese": "Como se diz: \"Tô me jogando de cabeça. Olha só.\"?",
-            "options": ["I'm off the deep end, watch as I dive in.", "I'm trowing myself in the deep, look at me.", "I'm jumping with my head in the water, look at me."],
+            "options": [
+                "I'm off the deep end, watch as I dive in.",
+                "I'm trowing myself in the deep, look at me.",
+                "I'm jumping with my head in the water, look at me."
+            ],
             "correctIndex": 0,
             "videoUrl": "Lady Gaga, Bradley Cooper - Shallow (from A Star Is Born) (Official Music Video)_6b6d4d5b_cortado_20260722_150608.mp4",
             "songTitle": "Shallow",
@@ -240,7 +300,11 @@
             "id": 29,
             "english": "You can stand under my umbrella",
             "portuguese": "Como se diz: \"Você pode ficar embaixo do meu guarda-chuva\"?",
-            "options": ["You can stand under my umbrella", "You can be my umbrella", "You can run under my umbrella"],
+            "options": [
+                "You can stand under my umbrella",
+                "You can be my umbrella",
+                "You can run under my umbrella"
+            ],
             "correctIndex": 0,
             "videoUrl": "Rihanna - Umbrella (Orange Version) (Official Music Video) ft. JAŸ-Z_f8f21764_cortado_20260722_145927.mp4",
             "songTitle": "Umbrella",
@@ -256,7 +320,11 @@
             "id": 30,
             "english": "Because I'm happy",
             "portuguese": "Como se diz: \"Porque estou feliz\"?",
-            "options": ["Because I'm happy", "Because I'm glad", "Because I'm cheerful"],
+            "options": [
+                "Because I'm happy",
+                "Because I'm glad",
+                "Because I'm cheerful"
+            ],
             "correctIndex": 0,
             "videoUrl": "Pharrell Williams - Happy (Official Video)_8dc8ee78_cortado_20260722_150855.mp4",
             "songTitle": "Happy",
@@ -272,7 +340,11 @@
             "id": 27,
             "english": "You want me, I want you, baby",
             "portuguese": "Como se diz: \"Você me quer, eu quero você, baby\"?",
-            "options": ["You want me, I want you, baby", "You need me, I need you, baby", "You love me, I love you, baby"],
+            "options": [
+                "You want me, I want you, baby",
+                "You need me, I need you, baby",
+                "You love me, I love you, baby"
+            ],
             "correctIndex": 0,
             "videoUrl": "Dua Lipa - Levitating Featuring DaBaby (Official Music Video)_362e9027_cortado_20260722_145724.mp4",
             "songTitle": "Levitating",
@@ -288,7 +360,11 @@
             "id": 31,
             "english": "I'm blinded by the lights",
             "portuguese": "Como se diz: \"Essas luzes tão me cegando\"?",
-            "options": ["I'm blinded by the lights", "That lights are blind", "I'm blinded because of the light"],
+            "options": [
+                "I'm blinded by the lights",
+                "That lights are blind",
+                "I'm blinded because of the light"
+            ],
             "correctIndex": 0,
             "videoUrl": "The Weeknd - Blinding Lights (Official Video)_bc300693_cortado_20260722_151830.mp4",
             "songTitle": "Blinding Lights",
@@ -304,7 +380,11 @@
             "id": 36,
             "english": "I'm the bad guy, duh",
             "portuguese": "Como se diz: \"Eu sou o vilão, ué\"?",
-            "options": ["I'm the bad guy, duh", "I'm a bad man, duh", "I'm the evil, duh"],
+            "options": [
+                "I'm the bad guy, duh",
+                "I'm a bad man, duh",
+                "I'm the evil, duh"
+            ],
             "correctIndex": 0,
             "videoUrl": "Billie Eilish - bad guy_fd49e8ea_cortado_20260722_152855.mp4",
             "songTitle": "Bad Guy",
@@ -320,7 +400,11 @@
             "id": 38,
             "english": "Mama! Ooh!\nDidn't mean to make you cry",
             "portuguese": "Como se diz: \"Mãe! Ooh!\nNão quis fazer você chorar\"?",
-            "options": ["Mama! Ooh!\nDidn't mean to make you cry", "Mama! Ooh!\nI didn't want to you to cry", "Mama! Ooh!\nI not want to make you sad"],
+            "options": [
+                "Mama! Ooh!\nDidn't mean to make you cry",
+                "Mama! Ooh!\nI didn't want to you to cry",
+                "Mama! Ooh!\nI not want to make you sad"
+            ],
             "correctIndex": 0,
             "videoUrl": "Queen – Bohemian Rhapsody (Official Video Remastered)_74b26035_cortado_20260722_153730.mp4",
             "songTitle": "Bohemian Rhapsody",
@@ -336,7 +420,11 @@
             "id": 42,
             "english": "Hello, it's me",
             "portuguese": "Como se diz: \"Alô, sou eu.\"?",
-            "options": ["Hello, it's me", "Hello is I", "Hi I'm"],
+            "options": [
+                "Hello, it's me",
+                "Hello is I",
+                "Hi, I'm"
+            ],
             "correctIndex": 0,
             "videoUrl": "Adele - Hello (Official Music Video)_47ebf83f_cortado_20260722_154959.mp4",
             "songTitle": "Hello",
@@ -352,7 +440,11 @@
             "id": 49,
             "english": "I will always love you",
             "portuguese": "Como se diz: \"Eu sempre vou te amar\"?",
-            "options": ["I will always love you", "I forever love you", "I ever love you"],
+            "options": [
+                "I will always love you",
+                "I forever love you",
+                "I ever love you"
+            ],
             "correctIndex": 0,
             "videoUrl": "Whitney Houston - I Will Always Love You (Official 4K Video)_46fb0e2b_cortado_20260722_155426.mp4",
             "songTitle": "I Will Always Love You",
@@ -368,7 +460,11 @@
             "id": 62,
             "english": "But I crumble completely when you cry",
             "portuguese": "Como se diz: \"Mas eu desmorono completamente quando você chora\"?",
-            "options": ["But I crumble completely when you cry", "But I fall complete when you cry", "But I break when you cry"],
+            "options": [
+                "But I crumble completely when you cry",
+                "But I fall complete when you cry",
+                "But I break when you cry"
+            ],
             "correctIndex": 0,
             "videoUrl": "Arctic Monkeys - 505 (Music Video)_a9275aa3_cortado_20260723_131446.mp4",
             "songTitle": "505",
@@ -384,7 +480,11 @@
             "id": 67,
             "english": "Now you're just somebody that I used to know",
             "portuguese": "Como se diz: \"Agora você é só alguém que eu costumava conhecer\"?",
-            "options": ["Now you're just somebody that I used to know", "Now you're one that I know", "Now you're one that I knew before"],
+            "options": [
+                "Now you're just somebody that I used to know",
+                "Now you're one that I know",
+                "Now you're one that I knew before"
+            ],
             "correctIndex": 0,
             "videoUrl": "Gotye - Somebody That I Used To Know (feat. Kimbra) [Official Music Video]_deb5f0d4_cortado_20260723_132141.mp4",
             "songTitle": "Somebody That I Used to Know",
@@ -400,7 +500,11 @@
             "id": 72,
             "english": "I wanna be yours",
             "portuguese": "Como se diz: \"Eu quero ser seu\"?",
-            "options": ["I wanna be yours", "I want to be you", "I wanna to be yous"],
+            "options": [
+                "I wanna be yours",
+                "I want to be you",
+                "I wanna to be yous"
+            ],
             "correctIndex": 0,
             "videoUrl": "I Wanna Be Yours_949c8bf8_cortado_20260723_132920.mp4",
             "songTitle": "I Wanna Be Yours",
@@ -416,7 +520,11 @@
             "id": 73,
             "english": "Today I don't feel like doing anything",
             "portuguese": "Como se diz: \"Tô sem saco pra fazer nada hoje\"?",
-            "options": ["Today I don't feel like doing anything", "I don't want to do anything today", "I don't have bag to do anything today"],
+            "options": [
+                "Today I don't feel like doing anything",
+                "I don't want to do anything today",
+                "I don't have bag to do anything today"
+            ],
             "correctIndex": 0,
             "videoUrl": "Bruno Mars - The Lazy Song (Official Music Video)_249065d7_cortado_20260723_133500.mp4",
             "songTitle": "The Lazy Song",
@@ -432,7 +540,11 @@
             "id": 82,
             "english": "I never meant to let you down",
             "portuguese": "Como se diz: \"Nunca foi minha intenção te decepcionar\"?",
-            "options": ["I never meant to let you down", "I always wanted to let you go", "Never is my intencion to make sad"],
+            "options": [
+                "I never meant to let you down",
+                "I always wanted to let you go",
+                "Never is my intencion to make sad"
+            ],
             "correctIndex": 0,
             "videoUrl": "Post Malone - Better Now_7046793e_cortado_20260723_135033.mp4",
             "songTitle": "Better Now",
@@ -442,6 +554,186 @@
                 "usage": "Usado para se desculpar quando você magoa ou decepciona alguém",
                 "explanation": "'Mean to' = ter a intenção de. 'Let down' = decepcionar.",
                 "example": "I'm sorry I never meant to let you down. (Desculpa, nunca foi minha intenção te decepcionar.)"
+            }
+        },
+        {
+            "id": 95,
+            "english": "I had a dream, I got everything I wanted",
+            "portuguese": "Como se diz: \"Tive um sonho, consegui tudo que eu queria\"?",
+            "options": [
+                "I had a dream, I got everything I wanted",
+                "I dreamed and I had all I wanted",
+                "I had dream, I got everything that I want"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "Billie Eilish - everything i wanted_010d4f9c_cortado_20260728_152311.mp4",
+            "songTitle": "everything i wanted",
+            "artist": "Billie Eilish",
+            "dictionary": {
+                "literal": "Eu tive um sonho, consegui tudo que eu queria",
+                "usage": "Usado quando você realiza algo que sempre sonhou",
+                "explanation": "'Had a dream' = tive um sonho. 'Got everything I wanted' = consegui tudo que queria.",
+                "example": "I had a dream, I got everything I wanted, but it wasn't enough. (Tive um sonho, consegui tudo que queria, mas não foi o bastante.)"
+            }
+        },
+        {
+            "id": 111,
+            "english": "I can buy myself flowers, write my name in the sand",
+            "portuguese": "Como se diz: \"Posso comprar minhas próprias flores, escrever meu nome na areia\"?",
+            "options": [
+                "I can buy myself flowers, write my name in the sand",
+                "I buy flowers for me, write my name",
+                "I can buy flowers, write in the sand"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "Miley Cyrus - Flowers (Official Video)_d49e9bcf_cortado_20260728_153104.mp4",
+            "songTitle": "Flowers",
+            "artist": "Miley Cyrus",
+            "dictionary": {
+                "literal": "Posso comprar minhas próprias flores, escrever meu nome na areia",
+                "usage": "Refrão - usado pra dizer que você não precisa de ninguém pra ser feliz, você se basta",
+                "explanation": "'Buy myself' = comprar pra mim mesma. 'Write my name' = escrever meu nome. É sobre autoamor e independência.",
+                "example": "I can buy myself flowers and be happy alone. (Posso comprar minhas próprias flores e ser feliz sozinha.)"
+            }
+        },
+        {
+            "id": 117,
+            "english": "We found love in a hopeless place",
+            "portuguese": "Como se diz: \"A gente encontrou amor num lugar sem esperança\"?",
+            "options": [
+                "We found love in a hopeless place",
+                "We got love in a place without hope",
+                "We met love in a place with no hope"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "Rihanna - We Found Love ft. Calvin Harris_11f9f17d_cortado_20260728_153641.mp4",
+            "songTitle": "We Found Love",
+            "artist": "Rihanna feat. Calvin Harris",
+            "dictionary": {
+                "literal": "A gente encontrou amor num lugar sem esperança",
+                "usage": "Refrão - usado quando você encontra algo bom em uma situação difícil",
+                "explanation": "'Found' = encontrou (passado). 'Hopeless place' = lugar sem esperança. É sobre amor inesperado em momentos difíceis.",
+                "example": "We found love in a hopeless place, and it saved us. (A gente encontrou amor num lugar sem esperança, e isso nos salvou.)"
+            }
+        },
+        {
+            "id": 144,
+            "english": "You used to call me on my cell phone",
+            "portuguese": "Como se diz: \"Você constumava me ligar\"?",
+            "options": [
+                "You used to call me on my cell phone",
+                "You called me on my phone",
+                "You would call me on my cell phone"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "Drake - Hotline Bling_cb3df710_cortado_20260728_154228.mp4",
+            "songTitle": "Hotline Bling",
+            "artist": "Drake",
+            "dictionary": {
+                "literal": "Você costumava me ligar no celular",
+                "usage": "Verso - usado quando você sente falta de como a pessoa te procurava antes",
+                "explanation": "'Used to' = costumava (passado). 'Call me' = me ligar. 'Cell phone' = celular.",
+                "example": "You used to call me on my cell phone - now you don't even text. (Você ligava pra mim no celular - agora nem mensagem manda.)"
+            }
+        },
+        {
+            "id": 159,
+            "english": "And when I'm back in Chicago, I feel it",
+            "portuguese": "Como se diz: \"E quando volto pra Chicago, eu sinto\"?",
+            "options": [
+                "And when I'm back in Chicago, I feel it",
+                "When I go back from Chicago I feel",
+                "And when I return to Chicago, I have a feeling"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "Djo - End Of Beginning (Official Audio)_94f5da39_cortado_20260728_160858.mp4",
+            "songTitle": "End of Beginning",
+            "artist": "Djo",
+            "dictionary": {
+                "literal": "E quando volto pra Chicago, eu sinto",
+                "usage": "Refrão - usado quando você revisita um lugar ou momento importante do seu passado e sente aquela nostalgia toda",
+                "explanation": "'When I'm back' = quando volto. 'I feel it' = eu sinto (a emoção, a nostalgia). A música fala sobre voltar a um lugar que marcou sua vida.",
+                "example": "And when I'm back in Chicago, I feel it - all the memories come back. (E quando volto pra Chicago, eu sinto - todas as lembranças voltam.)"
+            }
+        },
+        {
+            "id": 180,
+            "english": "How can we go back to being friends?",
+            "portuguese": "Como se diz: \"Como é que a gente volta a ser amigo?\"?",
+            "options": [
+                "How can we go back to being friends?",
+                "Why can we be friends again?",
+                "Where do we go back to being friends?"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "sombr - back to friends (official video)_bb9e2546_cortado_20260728_161411.mp4",
+            "songTitle": "Back to Friends",
+            "artist": "Sombr",
+            "dictionary": {
+                "literal": "Como podemos voltar a ser amigos?",
+                "usage": "Refrão - usado quando você percebe que é impossível voltar a ser 'só amigo' depois de ter intimidade com alguém",
+                "explanation": "'How can we' = como é que a gente. 'Go back to being friends' = voltar a ser amigos. É a pergunta central da música, que expressa a dificuldade de desfazer a intimidade.",
+                "example": "How can we go back to being friends after everything we shared? (Como é que a gente volta a ser amigo depois de tudo que a gente compartilhou?)"
+            }
+        },
+        {
+            "id": 181,
+            "english": "Nobody said it was easy",
+            "portuguese": "Como se diz: \"Ninguém disse que ia ser fácil\"?",
+            "options": [
+                "Nobody said it was easy",
+                "No one say is easy",
+                "Anybody told me it was easy"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "Coldplay - The Scientist (Official 4K Video)_e002e9a4_cortado_20260728_162313.mp4",
+            "songTitle": "The Scientist",
+            "artist": "Coldplay",
+            "dictionary": {
+                "literal": "Ninguém disse que seria fácil",
+                "usage": "Refrão - usado quando você está passando por algo difícil e lembra que a vida nunca prometeu ser fácil",
+                "explanation": "'Nobody said' = ninguém disse. 'It was easy' = que era fácil. Uma das frases mais icônicas da música, sobre aceitar as dificuldades da vida e do amor.",
+                "example": "Nobody said it was easy, but I'm still trying. (Ninguém disse que ia ser fácil, mas ainda tô tentando.)"
+            }
+        },
+        {
+            "id": 205,
+            "english": "All of your friends have been here for too long",
+            "portuguese": "Como se diz: \"Seus amigos tão aqui faz tempo demais\"?",
+            "options": [
+                "All of your friends have been here for too long",
+                "Your friends are here long time",
+                "Your friends are here for very time"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "Chase Atlantic - FRIENDS (Official Lyric Video)_5f20496f_cortado_20260728_163314.mp4",
+            "songTitle": "Friends",
+            "artist": "Chase Atlantic",
+            "dictionary": {
+                "literal": "Todos os seus amigos estão aqui há tempo demais",
+                "usage": "Refrão - usado quando os amigos da pessoa estão influenciando demais a relação, atrapalhando ou só ficando no caminho",
+                "explanation": "'All of your friends' = todos os seus amigos. 'Have been here for too long' = estão aqui há tempo demais. A música fala sobre amigos que manipulam a pessoa e atrapalham o relacionamento.",
+                "example": "All of your friends have been here for too long, they're the ones telling you what to do. (Seus amigos tão aqui faz tempo demais, são eles que tão te dizendo o que fazer.)"
+            }
+        },
+        {
+            "id": 241,
+            "english": "Cause it's too cold for you here",
+            "portuguese": "Como se diz: \"Porque aqui tá muito frio pra você\"?",
+            "options": [
+                "Cause it's too cold for you here",
+                "Why it is cold for you there",
+                "Cause here is very hot for you"
+            ],
+            "correctIndex": 0,
+            "videoUrl": "The Neighbourhood - Sweater Weather (Official Video)_e991bcf3_cortado_20260728_163818.mp4",
+            "songTitle": "Sweater Weather",
+            "artist": "The Neighbourhood",
+            "dictionary": {
+                "literal": "Porque aqui está muito frio para você",
+                "usage": "Refrão - usado quando você quer proteger alguém que está vulnerável, oferecendo acolhimento",
+                "explanation": "'Cause' = porque. 'Too cold for you here' = muito frio pra você aqui. É a justificativa pra oferecer o moletom e aquecer a pessoa - um gesto de cuidado e intimidade.",
+                "example": "Cause it's too cold for you here - come closer, I'll keep you warm. (Porque aqui tá muito frio pra você - chega mais perto, vou te aquecer.)"
             }
         }
     ]
